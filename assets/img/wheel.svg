@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <radialGradient id="grad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="150" r="145" fill="#004" stroke="#ffd700" stroke-width="6"/>
+  <g id="slices">
+  <path d="M150 150 L290.00 150.00 A140 140 0 0 1 248.99 248.99 Z" fill="#ffd700"/>
+  <path d="M150 150 L248.99 248.99 A140 140 0 0 1 150.00 290.00 Z" fill="#005"/>
+  <path d="M150 150 L150.00 290.00 A140 140 0 0 1 51.01 248.99 Z" fill="#ffd700"/>
+  <path d="M150 150 L51.01 248.99 A140 140 0 0 1 10.00 150.00 Z" fill="#005"/>
+  <path d="M150 150 L10.00 150.00 A140 140 0 0 1 51.01 51.01 Z" fill="#ffd700"/>
+  <path d="M150 150 L51.01 51.01 A140 140 0 0 1 150.00 10.00 Z" fill="#005"/>
+  <path d="M150 150 L150.00 10.00 A140 140 0 0 1 248.99 51.01 Z" fill="#ffd700"/>
+  <path d="M150 150 L248.99 51.01 A140 140 0 0 1 290.00 150.00 Z" fill="#005"/>
+  </g>
+</svg>
