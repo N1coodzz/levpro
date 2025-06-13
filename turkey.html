@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gizli Bonus</title>
     <link rel="icon" href="icon-192.svg" />
+    <link rel="apple-touch-icon" href="icon-192.svg" />
+    <meta property="og:image" content="banner-492x328.svg" />
     <style>
         body {
             margin: 0;
@@ -176,13 +178,14 @@
     <script>
         const fomoMessages = [
             '52 kişi şu anda oynuyor',
-            'Ahmet az önce 50 TL kazandı!',
-            'Zeynep 100 TL kazandı!',
+            'Ahmet az önce 50 TRY kazandı!',
+            'Zeynep 100 TRY kazandı!',
             '37 kişi şu anda oynuyor',
-            'Mehmet 200 TL kazandı!',
-            'Elif 150 TL kazandı!',
+            'Mehmet 200 TRY kazandı!',
+            'Elif 150 TRY kazandı!',
             '49 kişi oyuna katıldı',
-            'Can 75 TL kazandı!'
+            'Can 75 TRY kazandı!',
+            'Ayşe 250 TRY kazandı!'
         ];
         let fomoIndex = 0;
         function updateFomo() {
@@ -223,8 +226,10 @@
                 ch.classList.add('opened');
                 chests.forEach(c => c.classList.add('disabled'));
                 ch.classList.remove('disabled');
-                overlay.style.display = 'block';
-                popup.style.display = 'block';
+                setTimeout(() => {
+                    overlay.style.display = 'block';
+                    popup.style.display = 'block';
+                }, 300);
             });
         });
 
