@@ -9,19 +9,21 @@
   <meta name="description" content="Резюме Владислава: аналитик, антифрод, арбитраж трафика. Ищу подработку с возможным переходом на фулл-тайм.">
   <meta name="author" content="Владислав">
   <meta name="keywords" content="аналитик, антифрод, арбитраж трафика, резюме, iGaming, Crypto, KYC, AML">
+  <meta name="robots" content="index, follow">
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Резюме Владислава">
   <meta property="og:description" content="Аналитика, антифрод, арбитраж трафика. Ищу подработку, рассматриваю фулл-тайм в перспективе.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:image" content="https://yourdomain.com/assets/img/preview.jpg">
+  <meta property="og:url" content="https://nicoodz.github.io/resume">
+  <meta property="og:image" content="https://nicoodz.github.io/resume/assets/img/preview.jpg">
 
   <!-- Стили -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wD///8A////AP///wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -35,9 +37,33 @@
     section {
       padding-top: 30px;
     }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-header">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Владислав</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Опыт</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Навыки</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <header class="container text-center py-5">
     <h1 class="mb-3">Владислав</h1>
     <p class="lead">Москва, 21 год</p>
@@ -58,84 +84,35 @@
     </div>
   </header>
 
-  <section class="container mb-5" id="about" data-aos="fade-up">
-    <h2><i class="fas fa-user me-2"></i>Обо мне</h2>
-    <h5 class="mt-3">Образование</h5>
-    <ul>
-      <li>СПО: Администратор баз данных (2020–2024)</li>
-      <li>ВУЗ: В процессе (2024–2027)</li>
-    </ul>
-    <p>
-      С 2023 года работаю в Crypto iGaming-проекте. За год прошёл путь от стажера до аналитика 4 категории.  
-      Отвечаю за антифрод, KYC/AML, транзакционный мониторинг и комплаенс.  
-      Параллельно развиваюсь в арбитраже трафика: запускаю кампании, делаю преленды, отслеживаю поведение пользователей.
-    </p>
-  </section>
-
-  <section class="container mb-5" id="experience" data-aos="fade-up">
-    <h2><i class="fas fa-briefcase me-2"></i>Опыт работы</h2>
-    <h5>Crypto iGaming-проект (офис)</h5>
-    <p><em>06.07.2023 — настоящее время</em></p>
-    <ul>
-      <li><strong>Стажер-практикант</strong> (06.07.2023 — 05.10.2023)</li>
-      <li><strong>Аналитик 5 категории</strong> (05.10.2023 — 10.06.2024)</li>
-      <li><strong>Аналитик 4 категории</strong> (10.06.2024 — 01.02.2025)</li>
-    </ul>
-    <h6 class="mt-3">Основные задачи:</h6>
-    <ul class="list-unstyled">
-      <li><i class="fas fa-shield-alt me-2 text-primary"></i>Антифрод</li>
-      <li><i class="fas fa-user-check me-2 text-primary"></i>KYC / AML</li>
-      <li><i class="fas fa-scale-balanced me-2 text-primary"></i>Комплаенс</li>
-      <li><i class="fas fa-chart-line me-2 text-primary"></i>Транзакционный анализ</li>
-      <li><i class="fas fa-handshake me-2 text-primary"></i>Поддержка партнёрской программы</li>
-    </ul>
-  </section>
-
-  <section class="container mb-5" id="arbitrage" data-aos="fade-up">
-    <h2><i class="fas fa-bullhorn me-2"></i>Арбитраж трафика</h2>
-    <p>Самостоятельно запускал push-рекламные кампании на Tier-3 страны. Создавал креативы, делал преленды, анализировал поведение пользователей через PeerClick. Логгировал действия по UTM-меткам и передавал их в Telegram-бота.</p>
-    <p>Примеры прелендингов:</p>
-    <ol>
-      <li><a href="https://n1coodzz.github.io/nz-lendings/1/" target="_blank" rel="noopener">#1</a></li>
-      <li><a href="https://n1coodzz.github.io/levpro2/" target="_blank" rel="noopener">#2</a></li>
-      <li><a href="https://n1coodzz.github.io/mex/" target="_blank" rel="noopener">#3</a></li>
-      <li><a href="https://n1coodzz.github.io/nzrkeo/" target="_blank" rel="noopener">#4</a></li>
-    </ol>
-    <p><strong>Инструменты:</strong> Push-реклама (RichAds), CTR/CR анализ, PeerClick, Telegram-бот, A/B тесты, UTM-логгирование.</p>
-  </section>
-
-  <section class="container mb-5" id="interests" data-aos="fade-up">
-    <h2><i class="fas fa-compass me-2"></i>Что я ищу</h2>
-    <p>Я стремлюсь развиваться в направлениях, которые сочетают техническую экспертизу, аналитику и практическую ценность. Особенно интересны следующие сферы:</p>
-    <ul>
-      <li><strong>OSINT</strong> — открытая разведка и анализ цифровых следов</li>
-      <li><strong>Cybersecurity</strong> — защита систем, антифрод, анализ инцидентов</li>
-      <li><strong>Affiliate Marketing</strong> — арбитраж трафика, CPA, создание воронок</li>
-      <li><strong>Data Analyst</strong> — обработка, визуализация и анализ данных</li>
-    </ul>
-  </section>
-
+  <!-- Блок навыков -->
   <section class="container mb-5" id="skills" data-aos="fade-up">
     <h2><i class="fas fa-cogs me-2"></i>Навыки</h2>
-    <div class="d-flex flex-wrap gap-2">
-      <span class="badge bg-secondary">Anti-fraud</span>
-      <span class="badge bg-secondary">KYC / AML</span>
-      <span class="badge bg-secondary">Blockchain-аналитика</span>
-      <span class="badge bg-secondary">Crypto-комплаенс</span>
-      <span class="badge bg-secondary">PeerClick</span>
-      <span class="badge bg-secondary">Telegram API</span>
-      <span class="badge bg-secondary">UTM-логгирование</span>
-      <span class="badge bg-secondary">SQL / Excel / Google Sheets</span>
-      <span class="badge bg-secondary">Push-реклама</span>
-      <span class="badge bg-secondary">A/B тестирование</span>
-      <span class="badge bg-secondary">Поведенческие паттерны</span>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li><i class="fas fa-check-circle text-success me-2"></i>Anti-fraud</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>KYC / AML</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Blockchain-аналитика</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Crypto-комплаенс</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>PeerClick</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Telegram API</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li><i class="fas fa-check-circle text-success me-2"></i>UTM-логгирование</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>SQL / Excel / Google Sheets</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Push-реклама</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>A/B тестирование</li>
+          <li><i class="fas fa-check-circle text-success me-2"></i>Поведенческие паттерны</li>
+        </ul>
+      </div>
     </div>
   </section>
 
+  <!-- Контакты -->
   <section class="container mb-5" id="contact" data-aos="fade-up">
     <h2><i class="fas fa-envelope me-2"></i>Контакты</h2>
-    <p><i class="fas fa-paper-plane me-2"></i>Email: <a href="mailto:fetbhfndf@inbox.ru">fetbhfndf@inbox.ru</a></p>
-    <p><i class="fab fa-telegram me-2"></i>Telegram: <a href="https://t.me/Nicoodz" target="_blank" rel="noopener">@Nicoodz</a></p>
     <form id="feedbackForm" class="mt-4 needs-validation" novalidate>
       <div class="mb-3">
         <label for="name" class="form-label">Имя</label>
@@ -162,22 +139,26 @@
     <small>&copy; 2024 Владислав. Все права защищены.</small>
   </footer>
 
+  <!-- Скрипты -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     AOS.init();
 
-    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const form = this;
-      if (!form.checkValidity()) {
-        e.stopPropagation();
-        form.classList.add('was-validated');
-        return;
-      }
-      alert('Форма в разработке. Свяжитесь через Telegram.');
-    });
+    const feedbackForm = document.getElementById('feedbackForm');
+    if (feedbackForm) {
+      feedbackForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const form = this;
+        if (!form.checkValidity()) {
+          e.stopPropagation();
+          form.classList.add('was-validated');
+          return;
+        }
+        alert('Форма в разработке. Свяжитесь через Telegram.');
+      });
+    }
 
     function downloadPDF() {
       const element = document.body;
