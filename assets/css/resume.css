@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f8f9fa;
+}
+
+section {
+  padding-top: 1rem;
+}
+
+.timeline li {
+  margin-bottom: 1rem;
+}
