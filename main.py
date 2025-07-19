@@ -73,6 +73,8 @@ async def approve_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await query.edit_message_text(f"❌ Ошибка при отправке: {e}")
 
+# ...весь твой код выше остаётся без изменений
+
 def main():
     app = Application.builder().token(API_TOKEN).build()
 
@@ -87,3 +89,8 @@ def main():
     app.add_handler(CallbackQueryHandler(approve_handler, pattern="^approve_"))
 
     app.run_polling()
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+
