@@ -3,36 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Telegram Bot / Mini App — решения для бизнеса</title>
-  <meta name="description" content="Telegram-боты и Mini App под бизнес-задачи: автоматизация, заявки, доступ, интеграции. Понятный UX и стабильная логика." />
+  <title>Разработка Telegram-ботов и Mini Apps для бизнеса — автоматизация и интеграции</title>
+  <meta name="description" content="Разработка Telegram-ботов и Mini Apps под бизнес-задачи: автоматизация процессов, заявки, доступ, интеграции с API и БД. Проектирование, разработка, тестирование и передача решения." />
+
+  <!-- Favicon
+    Важно: если сайт НЕ в корне домена (например GitHub Pages в подпапке),
+    замени /favicon.* на относительные пути ./favicon.* чтобы иконки не пропали.
+  -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     :root{
       --bg: #0b0f14;
       --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.68);
+      --muted: rgba(255,255,255,.70);
       --muted2: rgba(255,255,255,.55);
       --accent: #3BF6B0;
       --accent2: #5CC8FF;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 20px;
-      --radius2: 28px;
+      --radius: 18px;
+      --radius2: 26px;
       --max: 1080px;
+      --stroke: rgba(255,255,255,.10);
+      --stroke2: rgba(255,255,255,.14);
+      --panel: rgba(255,255,255,.035);
+      --panel2: rgba(255,255,255,.05);
     }
 
     * { box-sizing: border-box; }
     html, body { height: 100%; }
 
-    /* ЕДИНЫЙ ФОН НА ВСЮ ВЫСОТУ БЕЗ РЕЗКИХ ПЕРЕХОДОВ */
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color: var(--text);
       overflow-x: hidden;
       background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
-    /* Все цветовые акценты делаем фиксированным слоем, чтобы при скролле гамма не "ломалась" */
     body::before{
       content:"";
       position: fixed;
@@ -51,12 +64,12 @@
 
     a{ color: inherit; text-decoration: none; }
     .container{ width: min(var(--max), calc(100% - 40px)); margin: 0 auto; position: relative; z-index: 1; }
+    section{ padding: 22px 0; scroll-margin-top: 92px; }
 
-    /* Top bar */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(11,15,20,.86), rgba(11,15,20,.60));
+      backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(11,15,20,.90), rgba(11,15,20,.62));
       border-bottom: 1px solid rgba(255,255,255,.06);
     }
     .topbar-inner{
@@ -66,29 +79,13 @@
     }
     .brand{
       display:flex; align-items:center; gap: 10px;
-      min-width: 240px;
+      min-width: 260px;
     }
-
-    /* AVATAR (пока emoji). Для своей — поставь PNG/JPG 512x512 */
-    .avatar{
-      width: 34px;
-      height: 34px;
-      border-radius: 10px; /* можно 999px если хочешь круг */
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
-      background: rgba(255,255,255,.06);
-      font-size: 18px;
-      line-height: 1;
-    }
-
-    .brand b{ font-weight: 750; letter-spacing: .2px; }
+    .brand b{ font-weight: 780; letter-spacing: .2px; }
     .brand span{ display:block; font-size: 12px; color: var(--muted2); margin-top: 2px; }
 
     .nav{
-      display:flex; gap: 14px; align-items:center;
+      display:flex; gap: 10px; align-items:center;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -97,9 +94,19 @@
       color: var(--muted);
       padding: 8px 10px;
       border-radius: 12px;
-      transition: .2s ease;
+      transition: .18s ease;
+      border: 1px solid transparent;
     }
-    .nav a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
+    .nav a:hover{
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.08);
+      color: var(--text);
+    }
+    .nav a.active{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.12);
+    }
 
     .actions{ display:flex; align-items:center; gap: 10px; min-width: 240px; justify-content: flex-end; }
     .btn{
@@ -111,11 +118,16 @@
       color: var(--text);
       font-weight: 650;
       font-size: 13px;
-      transition: .2s ease;
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease;
       cursor: pointer;
       user-select:none;
+      outline: none;
     }
     .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); }
+    .btn:focus-visible{
+      box-shadow: 0 0 0 4px rgba(92,200,255,.14);
+      border-color: rgba(92,200,255,.28);
+    }
     .btn.primary{
       border: 1px solid rgba(59,246,176,.35);
       background: linear-gradient(135deg, rgba(59,246,176,.18), rgba(92,200,255,.12));
@@ -124,20 +136,21 @@
     .btn.primary:hover{ box-shadow: 0 18px 55px rgba(92,200,255,.10); }
     .btn.ghost{ background: transparent; }
 
-    /* Hero */
-    .hero{ padding: 56px 0 26px; }
+    .hero{ padding: 56px 0 18px; }
     .hero-grid{
       display:grid;
       grid-template-columns: 1.4fr .9fr;
       gap: 18px;
       align-items: stretch;
     }
+
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
       border: 1px solid rgba(255,255,255,.12);
       border-radius: var(--radius2);
       box-shadow: var(--shadow);
     }
+
     .hero-main{ padding: 26px; position: relative; overflow: hidden; }
     .badge{
       display:inline-flex; gap: 8px; align-items:center;
@@ -152,18 +165,19 @@
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       box-shadow: 0 0 0 4px rgba(59,246,176,.10);
     }
+
     h1{
       margin: 14px 0 10px;
-      font-size: clamp(28px, 4.2vw, 44px);
-      line-height: 1.05;
-      letter-spacing: -0.6px;
+      font-size: clamp(30px, 4.4vw, 46px);
+      line-height: 1.04;
+      letter-spacing: -0.8px;
     }
     .lead{
       margin: 0 0 16px;
       font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.55;
       color: var(--muted);
-      max-width: 58ch;
+      max-width: 60ch;
     }
     .hero-cta{
       display:flex; gap: 10px; flex-wrap: wrap;
@@ -191,19 +205,19 @@
     .kpi{
       padding: 16px;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid var(--stroke);
       background: rgba(255,255,255,.03);
+      transition: background .18s ease, border-color .18s ease;
     }
+    .kpi:hover{ background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.12); }
     .kpi .t{ font-size: 12px; color: var(--muted2); }
     .kpi .v{ font-size: 18px; font-weight: 780; margin-top: 6px; }
     .kpi .d{ font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.35; }
 
-    /* Sections */
-    section{ padding: 22px 0; }
     .section-title{
       display:flex; align-items: baseline; justify-content: space-between;
       gap: 12px;
-      margin-bottom: 12px;
+      margin: 6px 0 12px;
     }
     .section-title h2{
       margin:0;
@@ -217,23 +231,31 @@
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
     }
+
     .panel{
       grid-column: span 6;
       padding: 18px;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
+      border: 1px solid var(--stroke);
+      background: var(--panel);
       box-shadow: 0 14px 45px rgba(0,0,0,.28);
       overflow:hidden;
       position:relative;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
     }
+    .panel:hover{ transform: translateY(-2px); background: rgba(255,255,255,.045); border-color: rgba(255,255,255,.12); }
     .panel.big{ grid-column: span 7; }
     .panel.small{ grid-column: span 5; }
+    .panel.featured{
+      background: linear-gradient(135deg, rgba(59,246,176,.09), rgba(92,200,255,.05));
+      border-color: rgba(255,255,255,.14);
+    }
 
     .panel h3{
       margin:0 0 10px;
       font-size: 14px;
-      color: rgba(255,255,255,.88);
+      color: rgba(255,255,255,.90);
+      letter-spacing: -.1px;
     }
     .panel ul{
       margin:0; padding-left: 18px;
@@ -241,12 +263,17 @@
       line-height: 1.55;
       font-size: 13px;
     }
-    .panel p{ margin:0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .panel p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
 
     .pillrow{ display:flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
     .pill{
       font-size: 12px;
-      color: rgba(255,255,255,.76);
+      color: rgba(255,255,255,.78);
       border: 1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.03);
       padding: 7px 10px;
@@ -254,17 +281,17 @@
       display:inline-flex;
       align-items:center;
       gap: 8px;
+      white-space: nowrap;
     }
     .pill.accent{
       border-color: rgba(59,246,176,.25);
       background: linear-gradient(135deg, rgba(59,246,176,.14), rgba(92,200,255,.08));
     }
-    .icon{
-      width: 16px;
-      height: 16px;
-      display:inline-block;
-      opacity: .92;
+    .pill.label{
+      color: rgba(255,255,255,.60);
+      background: rgba(255,255,255,.02);
     }
+    .icon{ width: 16px; height: 16px; display:inline-block; opacity: .92; }
 
     .steps{
       display:grid; grid-template-columns: repeat(4, 1fr);
@@ -273,13 +300,14 @@
     .step{
       padding: 16px;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid var(--stroke);
       background: rgba(255,255,255,.03);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
     }
+    .step:hover{ transform: translateY(-2px); background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.12); }
     .step b{ display:block; font-size: 13px; margin-bottom: 6px; }
     .step span{ font-size: 12px; color: var(--muted); line-height: 1.45; }
 
-    /* Footer CTA */
     .cta{
       padding: 24px;
       border-radius: var(--radius2);
@@ -307,14 +335,17 @@
       color: rgba(255,255,255,.48);
     }
 
-    /* Reveal animations */
     .reveal{ opacity: 0; transform: translateY(14px); transition: .7s ease; }
     .reveal.show{ opacity: 1; transform: translateY(0); }
     .reveal.delay-1{ transition-delay: .08s; }
     .reveal.delay-2{ transition-delay: .16s; }
     .reveal.delay-3{ transition-delay: .24s; }
 
-    /* Responsive */
+    @media (prefers-reduced-motion: reduce){
+      * { scroll-behavior: auto !important; }
+      .reveal{ transition: none !important; transform: none !important; opacity: 1 !important; }
+    }
+
     @media (max-width: 920px){
       .hero-grid{ grid-template-columns: 1fr; }
       .actions{ min-width: auto; }
@@ -336,11 +367,9 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <!-- 8) emoji-аватар: для своей замени на <img class="avatar-img" ...> или оставь div и поставь эмодзи -->
-        <div class="avatar" title="Aватар (замени на свой)">🤖</div>
         <div>
           <b>Telegram Bot & Mini App</b>
-          <span>Готовые решения под бизнес-задачи • интеграции • стабильная логика</span>
+          <span>Разработка под бизнес-задачи • интеграции • надёжная логика</span>
         </div>
       </div>
 
@@ -349,16 +378,17 @@
         <a href="#outcomes">Результат</a>
         <a href="#process">Этапы</a>
         <a href="#terms">Условия</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <div class="actions">
-        <a class="btn ghost" href="#terms">Сроки/стоимость</a>
-        <a class="btn primary" href="#contact">Связаться</a>
+        <a class="btn ghost" href="#terms">Стоимость и сроки</a>
+        <a class="btn primary" href="#contact">Контакты</a>
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="top">
     <div class="hero">
       <div class="hero-grid">
         <div class="card hero-main reveal show">
@@ -366,41 +396,41 @@
 
           <div class="badge">
             <span class="dot" aria-hidden="true"></span>
-            <span>Telegram-решения • Bot / Mini App</span>
+            <span>Bot / Mini App • Telegram</span>
           </div>
 
-          <h1>Telegram-решение, готовое к реальному использованию</h1>
+          <h1>Telegram-боты и Mini Apps для бизнес-задач</h1>
           <p class="lead">
-            Создаю Telegram-ботов и Mini App под конкретные задачи: автоматизация, заявки, доступ, интеграции.
-            Акцент — на сценариях, удобстве для пользователя и предсказуемом результате.
+            Автоматизация процессов, приём и обработка заявок, управление доступом, интеграции с внешними сервисами.
+            Полный цикл работ: проектирование, разработка, тестирование и передача решения по утверждённым сценариям и критериям приёмки.
           </p>
 
           <div class="hero-cta">
-            <a class="btn primary" href="https://t.me/ivan_automation" target="_blank" rel="noreferrer">Написать в Telegram</a>
-            <a class="btn" href="#solution">Посмотреть детали</a>
+            <a class="btn primary" href="https://t.me/ivan_automation" target="_blank" rel="noopener noreferrer">Получить оценку проекта</a>
+            <a class="btn" href="#terms">Стоимость и условия</a>
           </div>
 
-          <!-- 1) меньше упоминаний имени -->
+          <!-- HERO: только Telegram, без email -->
           <div class="mini">
-            Контакт: <b>@ivan_automation</b> • Email: <b>betoniwe@gmail.com</b>
+            Контакт: <b>@ivan_automation</b>
           </div>
         </div>
 
         <aside class="card hero-side reveal show delay-1">
           <div class="kpi">
-            <div class="t">Формат</div>
-            <div class="v">Разовая работа</div>
-            <div class="d">Фиксируем объём, этапы и критерии готовности до старта.</div>
+            <div class="t">Формат работы</div>
+            <div class="v">Проектная разработка</div>
+            <div class="d">Объём работ, сценарии и критерии готовности фиксируются до начала работ.</div>
           </div>
           <div class="kpi">
-            <div class="t">Фокус</div>
-            <div class="v">UX и сценарии</div>
-            <div class="d">Проработка пользовательского пути и логики взаимодействия.</div>
+            <div class="t">Сроки реализации</div>
+            <div class="v">MVP 2–5 дней</div>
+            <div class="d">Сроки MVP — от 2 до 5 рабочих дней после утверждения требований и сценариев.</div>
           </div>
           <div class="kpi">
             <div class="t">Интеграции</div>
             <div class="v">API • БД • Платежи</div>
-            <div class="d">Подключение внешних сервисов и хранение данных (при необходимости).</div>
+            <div class="d">Подключение внешних сервисов выполняется в соответствии с задачами проекта.</div>
           </div>
         </aside>
       </div>
@@ -409,33 +439,29 @@
     <section id="solution">
       <div class="section-title">
         <h2>Решение</h2>
-        <p>placeholder</p>
       </div>
 
       <div class="grid">
-        <div class="panel big reveal">
-          <h3>Bot / Mini App под ваши задачи</h3>
-          <p>
-            Работа “под ключ”: проектирование сценариев → реализация → тестирование → передача готового решения.
-            На выходе — рабочий инструмент, который можно использовать и масштабировать.
-          </p>
+        <div class="panel big reveal featured">
+          <h3>Разработка Telegram-ботов и Mini Apps под задачи бизнеса</h3>
+          <p>Полный цикл разработки: анализ требований, проектирование логики и интерфейсов, реализация, тестирование и передача готового решения. Результат — стабильный инструмент, готовый к эксплуатации.</p>
           <div class="pillrow">
-            <span class="pill accent">Сценарии / логика</span>
-            <span class="pill">Заявки / формы</span>
-            <span class="pill">Выдача доступа</span>
-            <span class="pill">Админ-логика</span>
+            <span class="pill accent">Сценарии и бизнес-логика</span>
+            <span class="pill">Заявки и формы</span>
+            <span class="pill">Управление доступом</span>
+            <span class="pill">Админ-функции</span>
             <span class="pill">Интеграции</span>
           </div>
         </div>
 
         <div class="panel small reveal delay-1">
-          <h3>Типовые кейсы</h3>
+          <h3>Типовые сценарии</h3>
           <ul>
-            <li>приём заявок + автоквалификация</li>
-            <li>каталог / меню / запись</li>
-            <li>платный доступ / подписки</li>
-            <li>личный кабинет (Mini App)</li>
-            <li>уведомления, рассылки, CRM-связки</li>
+            <li>приём и квалификация заявок</li>
+            <li>каталоги, меню, запись и бронирование</li>
+            <li>подписки и платный доступ</li>
+            <li>личные кабинеты (Telegram Mini Apps)</li>
+            <li>уведомления и интеграции с CRM, таблицами и внутренними системами</li>
           </ul>
         </div>
       </div>
@@ -444,27 +470,24 @@
     <section id="outcomes">
       <div class="section-title">
         <h2>Результат</h2>
-        <p>placeholder</p>
       </div>
 
       <div class="grid">
         <div class="panel reveal">
-          <h3>Что вы получаете</h3>
+          <h3>Состав результата</h3>
           <ul>
-            <li>автоматизацию вместо ручных действий</li>
-            <li>понятный путь пользователя без лишних шагов</li>
-            <li>контроль и прозрачность (статусы / логи — при необходимости)</li>
-            <li>возможность расширять функционал</li>
+            <li>полностью работоспособный Telegram-бот или Mini App</li>
+            <li>передача исходного кода, доступов и прав владения</li>
+            <li>инструкция по запуску, настройке и дальнейшему использованию</li>
           </ul>
         </div>
 
         <div class="panel reveal delay-1">
           <h3>Критерии готовности</h3>
           <ul>
-            <li>согласованные сценарии работают на тестовых данных</li>
-            <li>обработка ошибок и исключений</li>
-            <li>инструкция по запуску и настройке</li>
-            <li>передача исходников и доступов</li>
+            <li>реализация всех утверждённых сценариев и бизнес-логики</li>
+            <li>обработка ошибок, исключений и нестандартных состояний</li>
+            <li>приёмка по согласованному чек-листу и требованиям</li>
           </ul>
         </div>
       </div>
@@ -473,53 +496,24 @@
     <section id="process">
       <div class="section-title">
         <h2>Этапы</h2>
-        <p>placeholder</p>
       </div>
 
       <div class="steps">
         <div class="step reveal">
-          <b>1) Уточнение задачи</b>
-          <span>Цели, аудитория, сценарии, ограничения. Фиксация объёма.</span>
+          <b>1) Формирование требований</b>
+          <span>Определение целей проекта, сценариев использования, требований к интеграциям и критериев приёмки.</span>
         </div>
         <div class="step reveal delay-1">
           <b>2) Проектирование</b>
-          <span>Потоки, состояния, экраны (Mini App), интеграции.</span>
+          <span>Проработка логики, пользовательских потоков, состояний и экранов (для Mini Apps).</span>
         </div>
         <div class="step reveal delay-2">
           <b>3) Реализация</b>
-          <span>Логика, интерфейс, подключение API/БД.</span>
+          <span>Разработка бизнес-логики, интерфейсов, интеграций с API и базами данных.</span>
         </div>
         <div class="step reveal delay-3">
-          <b>4) Тест и передача</b>
-          <span>Приёмка по чек-листу, исправления, передача и инструкция.</span>
-        </div>
-      </div>
-
-      <div style="height:14px"></div>
-
-      <div class="grid">
-        <div class="panel big reveal">
-          <h3>Подход к работе</h3>
-          <ul>
-            <li>объём и критерии готовности фиксируются до начала работ</li>
-            <li>демонстрация промежуточных результатов по этапам</li>
-            <li>сдача по чек-листу + передача исходников и инструкций</li>
-            <li>послепроектная стабилизация — по договорённости</li>
-          </ul>
-          <div class="pillrow">
-            <span class="pill">Прозрачные этапы</span>
-            <span class="pill">Контроль качества</span>
-            <span class="pill accent">Готовность к продакшену</span>
-          </div>
-        </div>
-
-        <div class="panel small reveal delay-1">
-          <h3>Коммуникация</h3>
-          <ul>
-            <li>Telegram: @ivan_automation</li>
-            <li>оперативная обратная связь</li>
-            <li>фиксация договорённостей</li>
-          </ul>
+          <b>4) Тестирование и передача</b>
+          <span>Тестирование, приёмка, передача исходников, доступов и инструкции.</span>
         </div>
       </div>
     </section>
@@ -527,21 +521,17 @@
     <section id="terms">
       <div class="section-title">
         <h2>Условия</h2>
-        <p>placeholder</p>
       </div>
 
       <div class="grid">
         <div class="panel big reveal">
           <h3>Стоимость</h3>
-          <p style="margin-bottom:10px;">
-            Ориентиры по бюджету (финальная оценка — после согласования объёма работ и интеграций):
-          </p>
           <ul>
             <li><b>Telegram-бот</b> — от <b>10 000 ₽</b></li>
             <li><b>Mini App</b> — от <b>20 000 ₽</b></li>
+            <li>Итоговая стоимость определяется объёмом функционала, количеством сценариев и составом интеграций.</li>
           </ul>
 
-          <!-- 5) Иконки + деловой стиль ("криптовалюта") -->
           <div class="pillrow" style="margin-top:12px;">
             <span class="pill">
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -549,7 +539,7 @@
                 <path d="M4 10h17" stroke="currentColor" stroke-width="1.6" opacity=".9"/>
                 <path d="M7 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
               </svg>
-              Оплата: карта
+              Карта
             </span>
             <span class="pill accent">
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -558,22 +548,53 @@
                 <path d="M11 8v10" stroke="currentColor" stroke-width="1.4" opacity=".6"/>
                 <path d="M13 8v10" stroke="currentColor" stroke-width="1.4" opacity=".6"/>
               </svg>
-              Оплата: криптовалюта (предпочтительно)
+              Криптовалюта
             </span>
           </div>
 
-          <p style="margin-top:12px; color: rgba(255,255,255,.60); font-size:12px; line-height:1.45;">
-            Возможна поэтапная оплата (MVP → финал) — условия фиксируются перед стартом.
-          </p>
+          <div style="margin-top:12px;">
+            <p style="margin:0; color: var(--muted); font-size: 13px; line-height: 1.55;">
+              <b>Развёртывание (Deploy):</b> инфраструктура и способ размещения подбираются в зависимости от предполагаемой нагрузки,
+              требований к отказоустойчивости и масштабируемости (VPS, Docker, облачные платформы и другие варианты).
+            </p>
+          </div>
         </div>
 
         <div class="panel small reveal delay-1">
           <h3>Сроки</h3>
           <ul>
-            <li>MVP (простая логика): 2–5 дней</li>
-            <li>с интеграциями/мини-кабинетом: 1–2 недели</li>
-            <li>итоговые сроки зависят от объёма работ и согласованного функционала</li>
+            <li>разработка MVP — от 2 до 5 рабочих дней</li>
+            <li>Mini Apps и проекты с интеграциями — от 1 до 2 недель</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (обновлено по твоим 4 пунктам) -->
+    <section id="faq">
+      <div class="section-title">
+        <h2>FAQ</h2>
+      </div>
+
+      <div class="grid">
+        <div class="panel reveal">
+          <h3>Что требуется от заказчика для начала работ?</h3>
+          <p>Требуется детальное техническое задание, а также ориентировочная оценка нагрузки (например, 100 пользователей или 10&nbsp;000). Дополнительно фиксируются ключевые сценарии и перечень интеграций.</p>
+        </div>
+
+        <div class="panel reveal delay-1">
+          <h3>Где может быть размещён бот?</h3>
+          <p>Бот может быть размещён на моих VDS/VPS. Стоимость размещения — 500&nbsp;₽ в месяц, оплата производится через меня. Доступ к серверу заказчику не предоставляется, чтобы исключить риск некорректных изменений и сбоев. Также возможна установка на инфраструктуре заказчика.</p>
+        </div>
+
+        <div class="panel reveal">
+          <h3>Предусмотрена ли поддержка после передачи проекта?</h3>
+          <p>В течение 1 месяца предоставляется поддержка и консультации. При передаче проекта вносятся согласованные правки в разумных пределах.</p>
+        </div>
+
+        <div class="panel reveal delay-1">
+          <h3>Что получает заказчик по итогам работ?</h3>
+          <p>Готовый продукт и исходный код.</p>
         </div>
       </div>
     </section>
@@ -581,11 +602,12 @@
     <section id="contact">
       <div class="cta reveal">
         <div>
-          <h3>Связаться</h3>
-          <p>Напишите кратко: цель, функционал, сроки — предложу оптимальный вариант и оценку.</p>
+          <h3>Контакты</h3>
+          <p>Опишите задачу, требуемый функционал и ожидаемые сроки — в ответ вы получите оценку формата работ, сроков и стоимости.</p>
+          <p style="margin:8px 0 0; font-size:12px; color: var(--muted2);">E-mail: <b>betoniwe@gmail.com</b></p>
         </div>
         <div class="right">
-          <a class="btn primary" href="https://t.me/ivan_automation" target="_blank" rel="noreferrer">Telegram</a>
+          <a class="btn primary" href="https://t.me/ivan_automation" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a class="btn" href="mailto:betoniwe@gmail.com">E-mail</a>
         </div>
       </div>
@@ -594,10 +616,9 @@
     <footer>
       <div class="fine">
         <div>© <span id="year"></span> • Telegram Bot / Mini App</div>
-
-        <!-- 6) Подвал со стеком/инструментами -->
         <div class="stack" aria-label="Технологии">
-          <span class="pill">Stack: Node.js</span>
+          <span class="pill label">Stack</span>
+          <span class="pill">Node.js</span>
           <span class="pill">TypeScript</span>
           <span class="pill">Telegraf / grammY</span>
           <span class="pill">Telegram Mini Apps</span>
@@ -612,43 +633,60 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Smooth anchor scrolling
+    // Smooth scroll with sticky header offset
+    const header = document.querySelector('.topbar');
+    const headerH = header ? header.offsetHeight : 0;
+
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href');
-        if (!id || id === '#') return;
         const el = document.querySelector(id);
         if (!el) return;
+
         e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const y = el.getBoundingClientRect().top + window.pageYOffset - headerH - 12;
+        window.scrollTo({ top: y, behavior: 'smooth' });
       });
     });
 
-    // Reveal on scroll
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
       for (const ent of entries) {
         if (ent.isIntersecting) {
           ent.target.classList.add('show');
-          io.unobserve(ent.target);
+          revealObserver.unobserve(ent.target);
         }
       }
     }, { threshold: 0.12 });
 
-    els.forEach(el => {
-      if (!el.classList.contains('show')) io.observe(el);
+    revealEls.forEach(el => {
+      if (!el.classList.contains('show')) revealObserver.observe(el);
     });
-  </script>
 
-  <!--
-    Аватар: лучшее разрешение 512x512 (PNG/JPG).
-    Как поставить:
-      1) Загрузить avatar.png рядом с этим html
-      2) Заменить блок:
-         <div class="avatar">🤖</div>
-         на:
-         <img class="avatar" src="avatar.png" alt="Avatar" />
-      3) Если хочешь круг — поставь border-radius: 999px;
-  -->
+    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+    const sections = navLinks
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if (!visible) return;
+
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        a.removeAttribute('aria-current');
+      });
+
+      const active = navLinks.find(a => a.getAttribute('href') === `#${visible.target.id}`);
+      if (active) {
+        active.classList.add('active');
+        active.setAttribute('aria-current', 'page');
+      }
+    }, { rootMargin: "-25% 0px -60% 0px", threshold: [0.06, 0.12, 0.2] });
+
+    sections.forEach(s => navObserver.observe(s));
+  </script>
 </body>
 </html>
