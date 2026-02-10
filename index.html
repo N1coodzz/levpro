@@ -1,0 +1,830 @@
+
+
+        <!DOCTYPE html>
+        <html lang="ru" >
+        <head>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script>
+        window.show_custom_error = function($txt,message=""){
+            if(message.indexOf("A network error occurred")>-1){
+                return false;
+            }
+            setTimeout(function(){
+                var body = document.querySelector("html");
+                var div = document.createElement("div");
+                div.style.margin = "55px auto 10px";
+                div.style.maxWidth = "500px";
+                div.className = "admin_note";
+                div.innerHTML = $txt;  // Changed from div.textContent to div.innerHTML
+                body.insertBefore(div, body.firstChild);
+            },1);
+        }
+        </script>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="shortcut icon" href="https://infourist.pro/crm/content/2025/05/frame-4-3.png"><title>INFOURIST.PRO | Обучение новой профессии - "инфоюрист"</title>
+        <meta name="description" content="Система юридического сопровождения инфобизнеса от Татьяны Чемидовой для юристов, стремящихся к доходу от 100 000₽ в месяц в онлайне"><meta property="og:image" content="https://infourist.pro/crm/content/2025/04/pic1.jpg?rel=1768478936">
+            <meta name="author" content="Обучение новой профессии - "инфоюрист""><script>window.meta_loadScript = function(url,callback) {
+            var scripts = document.getElementsByTagName("script");
+            for (var i = 0; i < scripts.length; i++) {
+                if (scripts[i].src === url) {
+                    callback();
+                    return;
+                }
+            }
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            
+            if (script.readyState) {  // For old versions of IE
+                script.onreadystatechange = function() {
+                    if (script.readyState === "loaded" || script.readyState === "complete") {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {
+                script.onload = function() {
+                    callback();
+                };
+            }
+            
+            script.src = url;
+            document.getElementsByTagName("head")[0].appendChild(script);
+          }</script><script>window.is_mobile_var = 0;if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {is_mobile_var = 1;}</script><script type="text/javascript" src="https://infourist.pro/crm/base/js/jquery.js?rel=1766718931"></script><style>
+    body .hidden {display: none;}
+    .relative {position:relative;}
+    :root{--admin-menu-width:60px;}</style><script type="text/javascript" src="https://infourist.pro/crm/base/js/pc_req.js?v=1757477430"></script>
+    <meta class="lang" data-ays="Вы уверены?" data-unsaved="У вас есть несохраненные изменения. Вы уверены, что хотите выйти?"  data-dz="#FFE7A4" data-btn="#82B8E0" data-copy="Скопировано!" data-choosecolor="Выберите цвет" data-load="Загрузка">
+    <meta class="domain" data-domain="https://infourist.pro" data-p="1057" data-sample="https://kozyon.com">
+        <style>@media print {
+            /* Force the width to 300px for printing */
+            body {
+                background-color: white;
+                height: auto; /* Adjust height for print */
+                display: block;
+            }
+
+            html {
+                width: 300px;
+            }
+        }</style>
+        </head>
+        <body class="lk grand_cont_hold  hasmenu  mfnls" style="" >
+        <style>
+.elem_wrap.n_entr{position:relative;}
+.ent_disable{display:none;position:absolute;width:100%;height:100%;z-index:9999;height:84px;left:0;right:0;margin:0 auto;}
+.elem_wrap.n_entr.disable .ent_disable.policy_checker,
+.sub_wrap.fields_grabber:not(.grabber_finished) .ent_disable.fields_grabber{display:block;}
+.elem_wrap.n_entr .btn_icon {height: 33px;}
+.elem_wrap.n_entr .row{display:-ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;height: 81px;}
+.elem_wrap.n_entr .col {height: 100%;-ms-flex-preferred-size: 0;flex-basis: 0;-ms-flex-positive: 1;flex-grow: 1;max-width: 100%;}
+.elem_wrap.elem_editor.n_entr > *:not(.elem_ed_ui) {pointer-events: none;}
+.elem_wrap.n_entr {max-width:530px;margin:0 auto;}
+.elem_wrap.n_entr .shadow_wrap.after .shadow_wrap_after {border-radius: 400px;width: 90%;height: 40px;display: block;position: absolute;bottom: 1px;left: 0;right: 0;margin: 0 auto;box-shadow: 0 10px 20px rgb(0 0 0 / 30%);}
+.elem_wrap.elem_editor .elem_wrap.n_entr {pointer-events: none;}
+.btn_icon {padding-right: 5px;}
+.btn_entr {cursor: pointer;width: 100%;border: 0;padding: 25px 0;text-decoration: none;display:flex !important;justify-content: center;align-items: center;display: -webkit-flex;-webkit-justify-content: center;-webkit-align-items: center;height: 100%;border-bottom: 1px solid #00000021 !important;border-top: 1px solid #ffffff42 !important;    flex-direction: column;}
+.btn_entr .fa {font-size: 34px;position: relative;}
+.sub_wrap:not(.count1) {padding: 0 15px;}
+.sub_wrap:not(.count1) .shadow_wrap.col {padding: 0;}
+.sub_wrap:not(.count1) .btn_entr {border-radius: 0;}
+.sub_wrap:not(.count1) .first_child .btn_entr {border-radius: 5px 0 0 5px;}
+.sub_wrap:not(.count1) .last_child .btn_entr {border-radius: 0 5px 5px 0;}
+.sub_wrap.many .btn_entr {display: block;padding:0;font-size: 14px;display: flex !important;flex-direction: column;}
+.sub_wrap.many .btn_entr:after {animation-name: flashers !important;}
+.sub_wrap.many .btn_icon {display: block;height: 30px;line-height: 30px;padding: 0 5px;}
+.sub_wrap .shadow_wrap {position: relative;}
+.sub_wrap .shadow_wrap .btn, .shadow_wrap .btnkoz {margin-bottom: 0;}
+.sub_wrap .shadow_wrap > *:first-child {z-index: 3;position: relative;}
+@keyframes flashers { 0% {left: -90%; }20% {left: 190%; } 100% {left: 190%; }}
+
+.enter.count1 .enter_bot_col.has_desc .svg_wrap{width:20px !important;}
+</style><style>
+.elem_wrap.n_entr{position:relative;}
+.ent_disable{display:none;position:absolute;width:100%;height:100%;z-index:9999;height:84px;left:0;right:0;margin:0 auto;}
+.elem_wrap.n_entr.disable .ent_disable.policy_checker,
+.sub_wrap.fields_grabber:not(.grabber_finished) .ent_disable.fields_grabber{display:block;}
+.elem_wrap.n_entr .btn_icon {height: 33px;}
+.elem_wrap.n_entr .row{display:-ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;height: 81px;}
+.elem_wrap.n_entr .col {height: 100%;-ms-flex-preferred-size: 0;flex-basis: 0;-ms-flex-positive: 1;flex-grow: 1;max-width: 100%;}
+.elem_wrap.elem_editor.n_entr > *:not(.elem_ed_ui) {pointer-events: none;}
+.elem_wrap.n_entr {max-width:530px;margin:0 auto;}
+.elem_wrap.n_entr .shadow_wrap.after .shadow_wrap_after {border-radius: 400px;width: 90%;height: 40px;display: block;position: absolute;bottom: 1px;left: 0;right: 0;margin: 0 auto;box-shadow: 0 10px 20px rgb(0 0 0 / 30%);}
+.elem_wrap.elem_editor .elem_wrap.n_entr {pointer-events: none;}
+.btn_icon {padding-right: 5px;}
+.btn_entr {cursor: pointer;width: 100%;border: 0;padding: 25px 0;text-decoration: none;display:flex !important;justify-content: center;align-items: center;display: -webkit-flex;-webkit-justify-content: center;-webkit-align-items: center;height: 100%;border-bottom: 1px solid #00000021 !important;border-top: 1px solid #ffffff42 !important;    flex-direction: column;}
+.btn_entr .fa {font-size: 34px;position: relative;}
+.sub_wrap:not(.count1) {padding: 0 15px;}
+.sub_wrap:not(.count1) .shadow_wrap.col {padding: 0;}
+.sub_wrap:not(.count1) .btn_entr {border-radius: 0;}
+.sub_wrap:not(.count1) .first_child .btn_entr {border-radius: 5px 0 0 5px;}
+.sub_wrap:not(.count1) .last_child .btn_entr {border-radius: 0 5px 5px 0;}
+.sub_wrap.many .btn_entr {display: block;padding:0;font-size: 14px;display: flex !important;flex-direction: column;}
+.sub_wrap.many .btn_entr:after {animation-name: flashers !important;}
+.sub_wrap.many .btn_icon {display: block;height: 30px;line-height: 30px;padding: 0 5px;}
+.sub_wrap .shadow_wrap {position: relative;}
+.sub_wrap .shadow_wrap .btn, .shadow_wrap .btnkoz {margin-bottom: 0;}
+.sub_wrap .shadow_wrap > *:first-child {z-index: 3;position: relative;}
+@keyframes flashers { 0% {left: -90%; }20% {left: 190%; } 100% {left: 190%; }}
+
+.enter.count1 .enter_bot_col.has_desc .svg_wrap{width:20px !important;}
+</style><section>
+<div class="pagebuilder mfelems_holder art_body "><div class="container"><div class="user_info" data-fgid="7" data-lang="ru" data-issupport="" data-inteam="0" data-slug="7"  data-crmid="0" data-id="0" data-botid="" ></div><div id="el527" data-id="527"
+		class="elem_wrap     first  custom_sort_holder_wrap  wm  edited  parent n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic entron   noneditor" style="" ><div class="relative"><div class="pgi imager r48126129" data-elemid="527" data-jsvarversion="0" data-resolution0="700" data-resolution1="1000"><div class="pc_delems_library hidden"><div class="delem_slide" data-id="id8b8nm2qao"><div id="delem_idqc9wjd8ce"><span class="delem_mega_wrap "><div class="delem_animbg" style="color:#DDDDDD;">
+                
+                <div class="animbg_holder"></div>
+                <span class="el4_r" style="border-color:#DDDDDD;color:#DDDDDD;"><span class="m m1"></span><span class="m m2"></span><span class="m m3"></span><span class="m m4"></span><span class="m m5"></span></span>
+                </div></span></div><div id="delem_idrqn76nrjg"><span class="delem_mega_wrap "><span class="delem_ename"><span class="dcrm_lb_wrap"><span class="dcrm_lb" style="background-color:#111;color:#FFFFFF;">Автор</span></span><span class="dcrm_nm_wrap">
+                <span class="dcrm_nm">
+                    <span class="dcrm_nm_back" style="background-color:#568DDD;"></span>
+                    <span class="aim" style="color:#FFFFFF;">Татьяна&nbsp;Чемидова</span>
+                </span>
+                <span class="dcrm_nm_wrap_shadow" style="box-shadow:0 0.3em 0.4em #568DDD;"></span>
+            </span>
+            </span></span></div><div id="delem_id39yeajcsx"><span class="delem_mega_wrap "><div class="dlogo_wrap"><div class="logo_wrapper txt sepor colorw"><div class="logo_inside">
+    <div class="logo_holder" >
+        <div class="relative">
+            <div class="aim" style="font-size:90%;">INFOURIST.PRO</div>
+        </div>
+    </div>
+    <div class="sepor" style="background:#fff;"></div>
+    <div class="logo_desc">
+        <div class="aim" >Помогаем&nbsp;юристам<br>освоить&nbsp;новую<br>профессию&nbsp;"инфоюрист"</div>
+    </div>
+    </div></div></div></span></div><div id="delem_id20u1ubj2d"><span class="delem_mega_wrap "><div class="delem_arrow"><style title>[data-id="id20u1ubj2d"] svg *{fill:#FFFFFF;}</style><div class="darrow_obj" style=""><svg viewBox="0 0 594.76 129.73" width="594.76" style="height:100%;" height="129.73"><path d="M423.55,130.38c-17.86-3-16.77-14.1-15.34-18.89,2.77-9.15,16.23-11.48,24.36-13.62s18.59-5.1,25.06-6.84c2.13-.57,11-1.84,7.42-4.47-1.76-1.29-8.9-.54-11.05-.56-3.19,0-6.37,0-9.56-.08L424,85.81c-49.91-.24-99.93,1.52-149.8,3.4-51.2,1.93-102.34,5-153.54,7-24.93,1-49.87,1.9-74.82,2.65-11.66.35-23.86,2.21-35.08-2C-.82,92.61-3.68,83.52,1.78,72.45s22.14-7,32.49-7.06c13.18,0,26.33-.5,39.5-1.06,24.85-1.07,49.69-2.28,74.54-3.43q76.07-3.52,152.14-6.34c51.66-1.84,103.24-2.09,154.91-3,3,0,14.37,1.45,11.23-3.54-1.17-1.87-5.1-2.73-7.08-3.64-3.44-1.56-6.88-3.13-10.34-4.67-9-4-22.39-6.85-23.9-18.39C424.05,12,428.46-2.27,439.93,1.53,451.87,5.48,463.49,12,475,17c24.42,10.68,48.86,21.51,73.8,31,5.68,2.14,11.39,4.21,17.13,6.17,6.14,2.1,13.14,3.29,18.81,6.5,8.31,4.69,9.62,11.51,8.94,20.57-.28,3.74-1.62,9.21-5.16,10.66a75.1,75.1,0,0,1-14.87,4.32,309.23,309.23,0,0,0-36.35,8c-25.11,7.24-43.11,11.56-68.54,17.73-6.09,1.47-19.44,5.65-25.54,7.07C436.94,130.46,427.93,131,423.55,130.38Z" transform="translate(0.89 -0.9)"/></svg></div><div style="padding-top:100%;"></div></div></span></div><div id="delem_idcbvtqaidn"><span class="delem_mega_wrap "><div class="delem_leadm17"><div class="filter_applier">
+                <div class="mockup_wrapper" style="background-image:url(https://infourist.pro/crm/content/2025/09/preview_mock_leadm17_354.png?update=6);padding-top:103.75%;"></div>
+                </div></div></span></div></div></div><div class="pc_initImages"><div class="image_162_full" data-src="https://infourist.pro/crm/content/2025/03/kozyoncominstructionsbgblue20jpeg.jpeg"></div><div class="image_41_1024" data-src="https://infourist.pro/crm/content/2025/03/photo_2025-03-21_00-12-31_removed.png"></div></div><div id="id8b8nm2qao" class="pc_slide nid8b8nm2qao"><div id="drag_id8b8nm2qao" class="pc_slide_width r48126129 n527"><div id="pc_canvas_id8b8nm2qao" data-setts="{`bgColor`:`transparent`,`background_image`:`162`}" data-slideid="id8b8nm2qao" class="pc_canvas r48126129 n527"><div id="idqc9wjd8ce" data-id="idqc9wjd8ce"  data-setts="{`type`:`animbg`,`background`:`#ddd`,`width`:616,`height`:616,`ratio`:1,`ratioOrig`:1,`left`:511.527,`top`:700.474,`id`:`idqc9wjd8ce`,`scaleX`:1,`scaleY`:1,`iW`:175,`iH`:175,`el_type`:``,`el_glow`:`0`,`el_emojis`:`\ud83d\udcb5\ud83c\udf31\ud83d\udcb0`,`el_scale`:`1.3`,`el_bgc`:`#DDDDDD`,`el_gl`:``,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:616px;height:616px;top:700.474px;left:511.527px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idd9gycg6ly" data-id="idd9gycg6ly"  data-setts="{`type`:`text`,`width`:365,`text`:`PGRpdiBjbGFzcz0idyI+CjxkaXYgY2xhc3M9InciPgo8cCBjbGFzcz0idyIgc3R5bGU9ImxpbmUtaGVpZ2h0OiAxOyI+PHNwYW4gY2xhc3M9InciIHN0eWxlPSJmb250LWZhbWlseTogVW5ib3VuZGVkXzgwMDsgZm9udC1zaXplOiA2NXB4OyBiYWNrZ3JvdW5kLWNvbG9yOiAjNTY4ZGRkOyBjb2xvcjogI2ZmZmZmZjsiPjxzcGFuIGNsYXNzPSJ3Ij48c3BhbiBjbGFzcz0idyI+PHN0cm9uZyBjbGFzcz0idyI+0K7QoNCY0KHQojwvc3Ryb25nPjwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvcD4KPC9kaXY+CjwvZGl2Pg==`,`background`:`#ddd`,`height`:65,`ratio`:5.21910778751934,`ratioOrig`:null,`left`:511.527,`top`:92.6873,`scaleX`:1,`scaleY`:1,`iW`:350,`iH`:147.1296,`rotate`:0,`dchFontSize`:`70.209`,`id`:`idd9gycg6ly`,`background_color`:`#cde266`,`background_round`:95,`background_spread`:25,`textEffect`:``,`comShadow`:1,`comShadow_offset`:5,`comShadow_direction`:90,`comShadow_color`:`#000`,`comShadow_blur`:10,`comShadow_transparency`:25}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:365px;top:92.6873px;left:511.527px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idpd74wu3y2" data-id="idpd74wu3y2"  data-setts="{`type`:`image`,`mediaid`:`41`,`width`:544,`height`:818,`background`:`#ddd`,`ratio`:0.6651037110770335,`ratioOrig`:0.66640625,`left`:511.527,`top`:605.605,`id`:`idpd74wu3y2`,`scaleX`:1,`scaleY`:1,`iW`:175,`iH`:262.60257913247364,`flipX`:1,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:544px;height:818px;top:605.605px;left:511.527px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idrqn76nrjg" data-id="idrqn76nrjg"  data-setts="{`type`:`ename`,`width`:332,`text`:`PHAgY2xhc3M9InciPjxzcGFuIGNsYXNzPSJ3IiBzdHlsZT0iZm9udC1zaXplOiAzMS43NTkyNTkyNTkyNTlweDsiPnstLWRlbGVtLS19PC9zcGFuPjwvcD4=`,`background`:`#ddd`,`height`:65,`ratio`:5.107692307692307,`ratioOrig`:5.107692307692307,`left`:486.054,`top`:737.772,`scaleX`:1,`scaleY`:1,`iW`:331.8519,`iH`:51.8519,`el_lb`:`\u0410\u0432\u0442\u043e\u0440`,`el_nm`:`\u0422\u0430\u0442\u044c\u044f\u043d\u0430 \u0427\u0435\u043c\u0438\u0434\u043e\u0432\u0430`,`el_lbc`:`#111`,`el_nmc`:`#568DDD`,`rotate`:0,`dchFontSize`:31.7593,`id`:`idrqn76nrjg`}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:332px;height:65px;top:737.772px;left:486.054px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idrpa9dlr0s" data-id="idrpa9dlr0s"  data-setts="{`type`:`text`,`width`:318,`text`:`PHAgY2xhc3M9InciPjxzcGFuIGNsYXNzPSJ3IiBzdHlsZT0iZm9udC1mYW1pbHk6IHViOyBmb250LXNpemU6IDcwcHg7IGNvbG9yOiAjZmZmZmZmOyI+0JjQndCk0J48L3NwYW4+PC9wPg==`,`background`:`#ddd`,`height`:84,`ratio`:1.8945762420491663,`ratioOrig`:null,`left`:187.032,`top`:95.1873,`id`:`idrpa9dlr0s`,`scaleX`:1,`scaleY`:1,`iW`:233.33333333333334,`iH`:168,`dchFontSize`:`70`,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:318px;top:95.1873px;left:187.032px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id2n0pcz82y" data-id="id2n0pcz82y"  data-setts="{`type`:`text`,`width`:624,`text`:`PHAgY2xhc3M9InciPjxzcGFuIGNsYXNzPSJ3IiBzdHlsZT0iZm9udC1mYW1pbHk6IENhdmVhdF81MDA7IGZvbnQtc2l6ZTogNjBweDsgY29sb3I6ICNmZmZmZmY7Ij7QndC+0LLQsNGPINC\/0YDQvtGE0LXRgdGB0LjRjyDQtNC70Y8g0Y7RgNC40YHRgtC+0LI8L3NwYW4+PC9wPg==`,`background`:`#ddd`,`height`:72,`ratio`:4.333486111111111,`ratioOrig`:null,`left`:340.043,`top`:166.197,`id`:`id2n0pcz82y`,`scaleX`:1,`scaleY`:1,`iW`:233.33333333333334,`iH`:58,`dchFontSize`:`60`,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:624px;top:166.197px;left:340.043px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id39yeajcsx" data-id="id39yeajcsx"  data-setts="{`type`:`logo`,`background`:`#ddd`,`width`:294,`height`:29,`ratio`:10.088888888888889,`ratioOrig`:10.088888888888889,`left`:187.032,`top`:930.462,`scaleX`:1,`scaleY`:1,`iW`:175,`iH`:43.4259,`el_clr`:`w`,`rotate`:0,`id`:`id39yeajcsx`}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:294px;height:29px;top:930.462px;left:187.032px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idaq31sgn4f" data-id="idaq31sgn4f"  data-setts="{`type`:`text`,`width`:233,`text`:`PHVsIHN0eWxlPSJmb250LXNpemU6IDI4cHg7Ij4KPGxpIHN0eWxlPSJjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyI+PHNwYW4gY2xhc3M9InciIHN0eWxlPSJmb250LXNpemU6IDI4cHg7IGNvbG9yOiAjZmZmZmZmOyI+0KHRgtGA0LDRgtC10LPQuNGPPC9zcGFuPjwvbGk+CjxsaSBzdHlsZT0iY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsiPjxzcGFuIGNsYXNzPSJ3IiBzdHlsZT0iZm9udC1zaXplOiAyOHB4OyBjb2xvcjogI2ZmZmZmZjsiPtCY0L3RgdGC0YDRg9C10LzQtdC90YLRizwvc3Bhbj48L2xpPgo8bGkgc3R5bGU9ImNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7Ij48c3BhbiBjbGFzcz0idyIgc3R5bGU9ImZvbnQtc2l6ZTogMjhweDsgY29sb3I6ICNmZmZmZmY7Ij7Qn9GA0LDQutGC0LjQutCwPC9zcGFuPjwvbGk+CjxsaSBzdHlsZT0iY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsiPjxzcGFuIGNsYXNzPSJ3IiBzdHlsZT0iZm9udC1zaXplOiAyOHB4OyBjb2xvcjogI2ZmZmZmZjsiPtCc0LDRgdGC0LXRgNCc0LDQudC90LQ8L3NwYW4+PC9saT4KPGxpIHN0eWxlPSJjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyI+PHNwYW4gY2xhc3M9InciIHN0eWxlPSJmb250LXNpemU6IDI4cHg7IGNvbG9yOiAjZmZmZmZmOyI+0KjQsNCx0LvQvtC90Ys8L3NwYW4+PC9saT4KPC91bD4=`,`background`:`#ddd`,`height`:190,`ratio`:null,`ratioOrig`:null,`left`:144.532,`top`:312.729,`id`:`idaq31sgn4f`,`scaleX`:1,`scaleY`:1,`iW`:233.33333333333334,`iH`:67,`rotate`:0,`dchFontSize`:`28`}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:233px;top:312.729px;left:144.532px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id20u1ubj2d" data-id="id20u1ubj2d"  data-setts="{`type`:`arrow`,`background`:`#ddd`,`width`:90,`height`:90,`ratio`:1,`ratioOrig`:1,`left`:116.391,`top`:494.136,`id`:`id20u1ubj2d`,`scaleX`:1,`scaleY`:1,`iW`:175,`iH`:175,`el_tp`:`x3`,`el_col`:`#FFFFFF`,`el_r`:`r`,`rotate`:90.00021045943028}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(1.5708000000049rad);width:90px;height:90px;top:494.136px;left:116.391px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idcbvtqaidn" data-id="idcbvtqaidn"  data-setts="{`type`:`leadm17`,`el_elemid`:`354`,`background`:`#ddd`,`width`:318,`height`:331,`ratio`:0.9615384615384615,`ratioOrig`:0.9615384615384616,`left`:134.048,`top`:727.09,`id`:`idcbvtqaidn`,`scaleX`:1,`scaleY`:1,`iW`:175,`iH`:331,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:318px;height:331px;top:727.09px;left:134.048px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"><style title="" data-title="Unbounded_800">[style*="Unbounded_800"] {font-weight:800;font-family:Unbounded_800 !important;}
+                @font-face {font-family:"Unbounded_800";src: url("https://infourist.pro/crm/content/auto/fonts/Unbounded@800.woff2") format("woff2");font-weight:800;font-family:"Unbounded_800" !important;}[style*="Unbounded_800"] strong{font-weight:inherit !important;}</style><style title="" data-title="ub">[style*="font-family: ub"],[style*="font-family:ub"] {font-weight:400;font-style:normal;font-family:ub !important;}
+                @font-face {font-family:"ub";src: url("https://infourist.pro/crm/base/fonts/ub.woff2") format("woff2"),url("https://infourist.pro/crm/base/fonts/ub.woff") format("woff");font-weight:400;font-style:normal;font-family:"ub" !important;}[style*="Unbounded_800"] strong{font-weight:inherit !important;}</style><style title="" data-title="Caveat_500">[style*="Caveat_500"] {font-weight:500;font-family:Caveat_500 !important;}
+                @font-face {font-family:"Caveat_500";src: url("https://infourist.pro/crm/content/auto/fonts/Caveat@500.woff2") format("woff2");font-weight:500;font-family:"Caveat_500" !important;}[style*="Caveat_500"] strong{font-weight:inherit !important;}</style></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div><div class="text objTemp" data-info="eyJjYXQiOiJ0ZXh0In0="><div class="textWrap"><div class="textContWrap"><div class="textCont txtPa"></div></div></div></div><div class="ename objTemp" data-info="eyJjYXQiOiJ0ZXh0IiwiaGFzTWVudSI6MSwiZGVsZW0iOjF9"><div class="textWrap"><div class="textContWrap"><div class="textCont txtPa"></div></div></div></div><div class="logo objTemp" data-info="eyJjYXQiOiJpbWFnZSIsImxvY2tSYXRpbyI6MSwiaGFzTWVudSI6MSwiZGVsZW0iOjF9"></div><div class="animbg objTemp" data-info="eyJjYXQiOiJpbWFnZSIsImxvY2tSYXRpbyI6MSwicmF0aW8iOiI2NHg2NCIsImhhc01lbnUiOjEsImRlbGVtIjoxfQ=="></div><div class="arrow objTemp" data-info="eyJjYXQiOiJpbWFnZSIsImxvY2tSYXRpbyI6MSwicmF0aW8iOiI2NHg2NCIsImhhc01lbnUiOjEsImRlbGVtIjoxfQ=="></div><div class="leadm17 objTemp" data-info="eyJjYXQiOiJpbWFnZSIsImhhc01lbnUiOjEsImRlbGVtIjoxfQ=="></div></div></div></div><div class="picg_entr_grad"></div></div></div><div class="picg_entr"><div id="elu6fwpcipkq" data-id="u6fwpcipkq"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_entr" 
+		
+		
+		style="margin-bottom:25px;">	</div><!--bcm~!@eru6fwpcipkq--></div></div><!--bcm~!@er527--><div id="el528" data-id="528"
+		class="elem_wrap       custom_sort_holder_wrap    edited  parent n_edit" 
+		
+		
+		style="margin-bottom:25px;"><div class="free_txt  elem100"><h3 class="p1"><span style="color: #000000;"><strong>Новая профессия для&nbspюристов: зарабатывай от&nbsp100 000 ₽ в&nbspонлайне, оказывая услуги инфобизнесу</strong></span></h3>
+<ul>
+<li>
+<p>💼 Обучение охватывает <strong>полный спектр услуг</strong> инфобизнеса</p>
+</li>
+<li>
+<p>✅ Метод <strong>не требует</strong> предварительного <strong>опыта </strong>работы инфоюристом - студенты начинают зарабатывать уже во время обучения</p>
+</li>
+<li>
+<p>🚀 <strong>Это возможно каждому: </strong>я сама начинала с&nbspнуля и&nbspпришла к&nbsp<strong>миллиону рублей</strong> чистой прибыли за&nbsp3 года</p>
+</li>
+<li>
+<p>🔹 <strong>Авторский подход</strong> от&nbspТатьяны Чемидовой — 11 лет практического опыта, 6 из&nbspних в&nbspинфобизнесе</p>
+</li>
+</ul></div></div><!--bcm~!@er528--><div id="el529" data-id="529"
+		class="elem_wrap       custom_sort_holder_wrap    edited  parent n_entr" 
+		
+		
+		style="margin-bottom:25px;">
+	<div class="relative entarr" style="display:flex;align-items: center;">
+	<div class="relative" style="z-index:1;">
+	<div class="mag_anim" style="pointer-events:none;min-width: 150px;max-width: 150px;"><div class="pgi imager r22029086" data-elemid="521" data-jsvarversion="0" data-resolution0="1080" data-resolution1="916"><div class="pc_delems_library hidden"><div class="delem_slide" data-id="ofyp9z31o"><div id="delem_id3mnl9dyvn"><span class="delem_mega_wrap "><div class="delem_leadm11"><div class="filter_applier">
+                <div class="mockup_wrapper" style="background-image:url(https://infourist.pro/crm/content/2025/03/preview_mock_leadm11_352.png?update=3);padding-top:84.833333333333%;"></div>
+                </div></div></span></div></div></div><div class="pc_initImages"></div><div id="ofyp9z31o" class="pc_slide nofyp9z31o"><div id="drag_ofyp9z31o" class="pc_slide_width r22029086 n521"><div id="pc_canvas_ofyp9z31o"  data-slideid="ofyp9z31o" class="pc_canvas r22029086 n521"><div id="id3mnl9dyvn" data-id="id3mnl9dyvn"  data-setts="{`id`:`id3mnl9dyvn`,`type`:`leadm11`,`el_find`:1,`left`:529.2,`top`:494.64,`width`:1101.6,`height`:934.32,`el_elemid`:352}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1101.6px;height:934.32px;top:494.64px;left:529.2px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="leadm11 objTemp" data-info="eyJjYXQiOiJpbWFnZSIsImhhc01lbnUiOjEsImRlbGVtIjoxfQ=="></div></div></div></div></div></div><p class="nomargin" style="padding-left:15px;font-size:14px;line-height:1.2;padding-bottom:35px;padding-top:15px;">Я&nbspсоздала этот сборник инструментов, чтобы помочь юристам быстрее освоить прибыльную нишу сопровождения инфобизнеса и&nbspначать зарабатывать от&nbsp100 000 рублей в&nbspмесяц 👇</p>
+	<div class="entarr_arrow" style="position:absolute;width:35px;left:148px;bottom:2px;transform:scale(-0.9,0.9) rotate(106deg);"><svg class="arrsvgw1" viewBox="0 0 593.35 528.89" style="height:100%;" width="593.35" height="528.89"><path d="M591.24,388.2c-1.49,3.59-9.41,14-11.82,15.33-2.88,1.61-5.11,4.13-7.64,6.21-9.39,7.67-18.63,15.44-27.82,23.35-19.2,16.51-38.73,32.59-58.07,48.92-9.31,7.85-18.67,15.6-27.93,23.5-4.75,4.07-9.53,8.11-14.39,12-4.54,3.66-9.18,8-14.36,10.77s-35-4.15-24.8-25.46c2.16-4.41,28.69-26.52,38.56-36.29,5.13-5.07,10.32-9.93,15.81-14.63,5-4.27,11.06-8.22,15.32-13.25-12.55,1.05-24.84,3.33-37.44,3.81-13.13.49-26.16,1-39.3.51-26-1-51.92-5-77.26-10.86-24.68-5.68-49.56-13.38-72.49-24.17-11.51-5.42-23.17-10.32-34.47-16.2-10.94-5.71-21.37-12.22-32-18.54-20.83-12.43-40.22-27.69-58.47-43.6-19-16.58-36.85-34.54-52.48-54.39-15.24-19.34-29.56-40.41-40-62.75a360,360,0,0,1-14.53-35c-1.9-5.49-3.33-11.11-4.87-16.7C9,154.31,6.84,148,5.7,141.37,1,113.71,0,81.73,2.08,58.15,3.29,44.36,4.39,29.46,10,16.66,16.54,1.12,29,0,35.24,0c14.82,0,27.23,15,22.3,31.73-2,10.75-5.23,39.51-2.24,71.68S67.71,151.46,87,193.64c28.28,52.13,79.75,99.24,139.56,134,29.48,17.13,67.41,30,100.31,39,16.63,4.52,33.87,8.57,51,10.74,8.57,1.09,17.17,2.17,25.78,3,8.77.84,17.77.47,26.57.57s17.47.69,26.09-.28c45.81-5.12,9.55-13.57,7.94-14-4.45-1.26-56.79-10.57-72.34-17.7-13.71-6.29-20.87-8.75-20.3-24.75.25-7,2.31-14.93,8.35-19.17,7.17-5,14.25-3,22-1.12,34.3,8.31,68.55,16.73,102.71,25.63,17.08,4.45,34.18,8.82,51.23,13.38,8.37,2.24,16.88,4.31,25.12,7a19.3,19.3,0,0,1,13.37,15.59C594.57,377.18,592.74,384.61,591.24,388.2Z" transform="translate(-1.05)"/></svg></div></div></div><!--bcm~!@er529--><div id="el530" data-id="530"
+		class="elem_wrap       custom_sort_holder_wrap    edited  parent n_edit" 
+		
+		
+		style="margin-bottom:25px;"><div class="free_txt  elem100"><h2>Коротко о&nbspтом, чего я&nbspдобилась благодаря своей профессии 🚀</h2>
+<p><strong>Свобода и&nbspфинансовая независимость</strong></p>
+<p>💼 Ушла из&nbspнайма и&nbspстала зарабатывать 1 млн+ через&nbspтри года занимаясь любимым делом где я&nbspявляюсь уже признанным экспертом<strong> </strong>в нише юридического сопровождения инфобизнеса при этом не&nbspпривязывая себя к&nbspместу. </p>
+<p>🌏 Работаю из&nbspлюбой точки мира — <strong data-start="1107" data-end="1138">Бали, Дубай, Япония, Италия, Китай</strong> — но при этом остаюсь в&nbspфокусе, в&nbspзаконах и&nbspв&nbspреальности клиентов.</p>
+<p class="p1">⚖️ Основала юридическую компанию <strong>«INFOURIST»</strong>, собрала команду, передала им систему и&nbspтеперь мы сопровождаем десятки сильных проектов на&nbspрынке инфобизнеса и&nbspEdTech.</p></div></div><!--bcm~!@er530--><div id="el531" data-id="531"
+		class="elem_wrap       custom_sort_holder_wrap    edited  parent n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="owl-carousel" style="padding-bottom:50px;" data-padding="20" data-nav="1" data-items="1" data-items600="1" data-loop="1" data-autoplay="1"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r19784902" data-elemid="531" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_177_1024" data-src="https://infourist.pro/crm/content/2025/03/photo_2025-03-25_16-22-59.jpg"></div></div><div id="idi91l9s2g4" class="pc_slide nidi91l9s2g4"><div id="drag_idi91l9s2g4" class="pc_slide_width r19784902 n531"><div id="pc_canvas_idi91l9s2g4"  data-slideid="idi91l9s2g4" class="pc_canvas r19784902 n531"><div id="ide1l2lsixn" data-id="ide1l2lsixn"  data-setts="{`type`:`image`,`mediaid`:`177`,`width`:1074,`height`:1431,`background`:`#ddd`,`ratio`:0.7505242116687906,`ratioOrig`:0.75,`left`:537,`top`:421.975,`id`:`ide1l2lsixn`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1074px;height:1431px;top:421.975px;left:537px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div><div id="elmnnigqhjur" data-id="mnnigqhjur"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r1896453" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_236_1024" data-src="https://infourist.pro/crm/content/2025/04/2025-04-02-184822.jpg"></div></div><div id="idnfck42npz" class="pc_slide nidnfck42npz"><div id="drag_idnfck42npz" class="pc_slide_width r1896453 nmnnigqhjur"><div id="pc_canvas_idnfck42npz"  data-slideid="idnfck42npz" class="pc_canvas r1896453 nmnnigqhjur"><div id="ids53l3xvek" data-id="ids53l3xvek"  data-setts="{`type`:`image`,`mediaid`:`236`,`width`:1081,`height`:1441,`background`:`#ddd`,`ratio`:0.749653100370872,`ratioOrig`:0.75,`left`:540.5,`top`:487.693,`id`:`ids53l3xvek`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0,`cropRatio`:0.7499999999999999}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1081px;height:1441px;top:487.693px;left:540.5px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@ermnnigqhjur--><div id="elutcvswaqvv" data-id="utcvswaqvv"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r58853402" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_238_1024" data-src="https://infourist.pro/crm/content/2025/04/2025-04-02-184713.jpg"></div></div><div id="idg4ic2ia11" class="pc_slide nidg4ic2ia11"><div id="drag_idg4ic2ia11" class="pc_slide_width r58853402 nutcvswaqvv"><div id="pc_canvas_idg4ic2ia11"  data-slideid="idg4ic2ia11" class="pc_canvas r58853402 nutcvswaqvv"><div id="idprcyk1t19" data-id="idprcyk1t19"  data-setts="{`type`:`image`,`mediaid`:`238`,`width`:1080,`height`:1439,`background`:`#ddd`,`ratio`:0.7503473830477072,`ratioOrig`:0.75,`left`:534.395,`top`:392.93,`id`:`idprcyk1t19`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1080px;height:1439px;top:392.93px;left:534.395px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@erutcvswaqvv--><div id="elfizncnnvyc" data-id="fizncnnvyc"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r48274989" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_176_1024" data-src="https://infourist.pro/crm/content/2025/03/img_2321-kopiya-1024.jpg"></div></div><div id="idi5p1551y1" class="pc_slide nidi5p1551y1"><div id="drag_idi5p1551y1" class="pc_slide_width r48274989 nfizncnnvyc"><div id="pc_canvas_idi5p1551y1"  data-slideid="idi5p1551y1" class="pc_canvas r48274989 nfizncnnvyc"><div id="ido9x2a7668" data-id="ido9x2a7668"  data-setts="{`type`:`image`,`mediaid`:`176`,`width`:1049,`height`:1398,`background`:`#ddd`,`ratio`:0.7498212258588279,`ratioOrig`:0.75,`left`:540,`top`:592.124,`id`:`ido9x2a7668`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1049px;height:1398px;top:592.124px;left:540px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@erfizncnnvyc--><div id="elp2vkdfaons" data-id="p2vkdfaons"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r82191160" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_180_1024" data-src="https://infourist.pro/crm/content/2025/03/photo_2025-03-25_16-24-17.jpg"></div></div><div id="idbfwb7kxva" class="pc_slide nidbfwb7kxva"><div id="drag_idbfwb7kxva" class="pc_slide_width r82191160 np2vkdfaons"><div id="pc_canvas_idbfwb7kxva"  data-slideid="idbfwb7kxva" class="pc_canvas r82191160 np2vkdfaons"><div id="idmwky7udzp" data-id="idmwky7udzp"  data-setts="{`type`:`image`,`mediaid`:`180`,`width`:1080,`height`:1440,`background`:`#ddd`,`ratio`:0.749818204950748,`ratioOrig`:0.75,`left`:540,`top`:552.83,`id`:`idmwky7udzp`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1080px;height:1440px;top:552.83px;left:540px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@erp2vkdfaons--><div id="elcsxmryvw42" data-id="csxmryvw42"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r85472989" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_169_1024" data-src="https://infourist.pro/crm/content/2025/03/podgotovka-foto-dlya-gifok-tanya-11.jpg"></div></div><div id="idkgl44q84g" class="pc_slide nidkgl44q84g"><div id="drag_idkgl44q84g" class="pc_slide_width r85472989 ncsxmryvw42"><div id="pc_canvas_idkgl44q84g"  data-slideid="idkgl44q84g" class="pc_canvas r85472989 ncsxmryvw42"><div id="idq3q5omlgi" data-id="idq3q5omlgi"  data-setts="{`type`:`image`,`mediaid`:`169`,`width`:1062,`height`:1415,`background`:`#ddd`,`ratio`:0.7505632236374051,`ratioOrig`:0.75,`left`:540,`top`:540,`id`:`idq3q5omlgi`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:1062px;height:1415px;top:540px;left:540px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@ercsxmryvw42--><div id="elw7fj67kzts" data-id="w7fj67kzts"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r28733380" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_160_full" data-src="https://infourist.pro/crm/content/2025/03/kozyoncominstructionsbgbrown16jpeg.jpeg"></div><div class="image_359_1024" data-src="https://infourist.pro/crm/content/2025/05/arm00240.jpg"></div><div class="image_360_1024" data-src="https://infourist.pro/crm/content/2025/05/arm00002.jpg"></div><div class="image_416_1024" data-src="https://infourist.pro/crm/content/2025/05/logo-zolotoi-bez-fona_removed-1024.png"></div></div><div id="idhej6eytaq" class="pc_slide nidhej6eytaq"><div id="drag_idhej6eytaq" class="pc_slide_width r28733380 nw7fj67kzts"><div id="pc_canvas_idhej6eytaq" data-setts="{`bgColor`:`linear-gradient(45deg,#23395d,#0d1b2a)`,`background_image`:`160`}" data-slideid="idhej6eytaq" class="pc_canvas r28733380 nw7fj67kzts"><div id="idlm02nmehu" data-id="idlm02nmehu"  data-setts="{`id`:`idlm02nmehu`,`type`:`text`,`text`:``,`top`:61.636,`left`:540,`width`:972,`height`:0,`class`:` `,`scaleX`:1,`scaleY`:1,`iW`:972,`iH`:314.27144999999996,`rotate`:0,`dchFontSize`:`NaN`}" class="groupWrap styleWrap  "  style="transform:translate(-50%,-50%) rotate(0rad);width:972px;top:61.636px;left:540px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idnerljv02y" data-id="idnerljv02y"  data-setts="{`type`:`image`,`mediaid`:`359`,`width`:468,`height`:702,`background`:`#ddd`,`ratio`:0.6665564590459478,`ratioOrig`:0.66640625,`left`:288,`top`:394.946,`id`:`idnerljv02y`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:405.158264947245,`rotate`:0,`radius`:`37`,`borderSize`:2,`borderStyle`:`solid`,`borderColor`:`#FFFFFF`}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:468px;height:702px;top:394.946px;left:288px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id7y1o2jfmn" data-id="id7y1o2jfmn"  data-setts="{`type`:`image`,`mediaid`:`360`,`width`:552,`height`:736,`background`:`#ddd`,`ratio`:0.7510195370734724,`ratioOrig`:0.75,`left`:750,`top`:629.336,`id`:`id7y1o2jfmn`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`borderSize`:`2`,`rotate`:0,`radius`:`43`,`borderStyle`:`solid`,`borderColor`:`#FFFFFF`}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:552px;height:736px;top:629.336px;left:750px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id3sjityz31" data-id="id3sjityz31"  data-setts="{`type`:`image`,`mediaid`:416,`width`:410,`height`:146,`background`:`#ddd`,`ratio`:2.8077039094035783,`ratioOrig`:2.7985074626865676,`left`:794.999,`top`:140.638,`id`:`id3sjityz31`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:96.47999999999999,`rotate`:0,`cropRatio`:2.8077039094035783}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:410px;height:146px;top:140.638px;left:794.999px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div><div class="text objTemp" data-info="eyJjYXQiOiJ0ZXh0In0="><div class="textWrap"><div class="textContWrap"><div class="textCont txtPa"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@erw7fj67kzts--><div id="elk805dkkg4w" data-id="k805dkkg4w"
+		class="elem_wrap     first  custom_sort_holder_wrap    edited   n_picg" 
+		
+		
+		style="margin-bottom:25px;"><div class="generated_pic    noneditor" style="" ><div class="relative"><div class="pgi imager r91919134" data-elemid="" data-jsvarversion="0" data-resolution0="1080" data-resolution1="1080"><div class="pc_delems_library hidden"></div><div class="pc_initImages"><div class="image_421_1024" data-src="https://infourist.pro/crm/content/2025/05/mozg-i-t-1024.jpg"></div><div class="image_487_1024" data-src="https://infourist.pro/crm/content/2025/05/2025-05-28-230935.jpg"></div><div class="image_489_1024" data-src="https://infourist.pro/crm/content/2025/05/2025-05-28-225935.jpg"></div><div class="image_488_1024" data-src="https://infourist.pro/crm/content/2025/05/2025-05-28-230845.jpg"></div><div class="image_423_1024" data-src="https://infourist.pro/crm/content/2025/05/ignatova-1024.jpg"></div><div class="image_422_1024" data-src="https://infourist.pro/crm/content/2025/05/sasha-belar.jpg"></div></div><div id="idsmqre440j" class="pc_slide nidsmqre440j"><div id="drag_idsmqre440j" class="pc_slide_width r91919134 nk805dkkg4w"><div id="pc_canvas_idsmqre440j"  data-slideid="idsmqre440j" class="pc_canvas r91919134 nk805dkkg4w"><div id="id8ict1zxk4" data-id="id8ict1zxk4"  data-setts="{`type`:`image`,`mediaid`:`421`,`width`:519,`height`:620,`background`:`#ddd`,`ratio`:0.8362697202814516,`ratioOrig`:0.837037037037037,`left`:216.958,`top`:310,`id`:`id8ict1zxk4`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:322.56637168141594,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:519px;height:620px;top:310px;left:216.958px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="ide99lk17ta" data-id="ide99lk17ta"  data-setts="{`type`:`image`,`mediaid`:487,`width`:535,`height`:641,`background`:`#ddd`,`ratio`:0.834446592015456,`ratioOrig`:0.75,`left`:143.96,`top`:834.76,`id`:`ide99lk17ta`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`cropRatio`:0.7500000000000001,`cropLeft`:50.02766355140187,`cropTop`:44.30733229329173,`cropWidth`:100,`cropHeight`:111.38845553822152,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:535px;height:641px;top:834.76px;left:143.96px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idbilxcsc1p" data-id="idbilxcsc1p"  data-setts="{`type`:`image`,`mediaid`:489,`width`:571,`height`:761,`background`:`#ddd`,`ratio`:0.7506572162879535,`ratioOrig`:0.75,`left`:920.161,`top`:774.76,`id`:`idbilxcsc1p`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:571px;height:761px;top:774.76px;left:920.161px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id9bpysxh4a" data-id="id9bpysxh4a"  data-setts="{`type`:`image`,`mediaid`:488,`width`:408,`height`:627,`background`:`#ddd`,`ratio`:0.6505605354807272,`ratioOrig`:0.75,`left`:560.296,`top`:306.5,`id`:`id9bpysxh4a`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`cropRatio`:0.75,`rotate`:0,`cropLeft`:44.95122549019608,`cropTop`:50,`cropWidth`:110.04901960784315,`cropHeight`:100}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:408px;height:627px;top:306.5px;left:560.296px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="idet5ab0z6l" data-id="idet5ab0z6l"  data-setts="{`type`:`image`,`mediaid`:`423`,`width`:459,`height`:563,`background`:`#ddd`,`ratio`:0.8153415062703735,`ratioOrig`:0.8148148148148148,`left`:908.955,`top`:267.434,`id`:`idet5ab0z6l`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:331.3636363636364,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:459px;height:563px;top:267.434px;left:908.955px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><div id="id7jpnrnfrq" data-id="id7jpnrnfrq"  data-setts="{`type`:`image`,`mediaid`:`422`,`width`:470,`height`:627,`background`:`#ddd`,`ratio`:0.7492025518341308,`ratioOrig`:0.75,`left`:560.296,`top`:827.76,`id`:`id7jpnrnfrq`,`scaleX`:1,`scaleY`:1,`iW`:270,`iH`:360,`cropRatio`:0.75,`rotate`:0}" class="groupWrap styleWrap "  style="transform:translate(-50%,-50%) rotate(0rad);width:470px;height:627px;top:827.76px;left:560.296px;" data-top="" data-left="" data-height=""><div class="objWrap"></div></div><!--pc_canvas_end--></div></div></div><div style="display:none;"><div class="pc_arrows_library hidden"></div><div class="pc_fonts_library"></div><div class="pc_code_shapes_js hidden"></div><div class="pc_obj_library hidden"><div class="image objTemp" data-info="eyJjYXQiOiJpbWFnZSJ9"><div class="imageWrap"><div class="imageCrop"><div class="imageCont"></div></div></div></div></div></div></div></div></div></div><!--bcm~!@erk805dkkg4w--></div></div><!--bcm~!@er531--><div id="el" data-id=""
+		class="elem_wrap       custom_sort_holder_wrap      parent n_lazy_load" 
+		
+		
+		style="margin-bottom:25px;"><div class="button_builder  button_wrap   succdonthide " data-aim="19866966120687667461"  style="">
+            
+                <div class="sec  "  data-eval="19866966120687667461"><div class="html_lazy_load"><div class="justload   "><div class="lds-spinner"><div></div><div></div><div></div><div></div> <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><style title>.justload {justify-content:center;display:flex;align-items:center;flex-direction:column;}.justload:not(.nopad){min-height:140px;}
+    .lds-spinner {color: official;display: inline-block;position: relative;width: 50px;height: 50px;}.lds-spinner div {transform-origin: 17px 10px;animation: lds-spinner 1.2s linear infinite;position: relative;top: 15px;left: 7px;}.lds-spinner div:after {content: " ";display: block;position: absolute;top: 3px;left: 27px;width: 2px; height: 8px;border-radius: 20%;background: #3e3e3e;transform: rotate(45deg);-webkit-transform: rotate(76deg);}.bg_blk .lds-spinner div:after{background:#fff;}.lds-spinner div:nth-child(1) {transform: rotate(0deg);animation-delay: -1.1s;}.lds-spinner div:nth-child(2) {transform: rotate(30deg);animation-delay: -1s;}.lds-spinner div:nth-child(3) {transform: rotate(60deg);animation-delay: -0.9s;}.lds-spinner div:nth-child(4) {transform: rotate(90deg);animation-delay: -0.8s;}.lds-spinner div:nth-child(5) {transform: rotate(120deg);animation-delay: -0.7s;}.lds-spinner div:nth-child(6) {transform: rotate(150deg);animation-delay: -0.6s;}.lds-spinner div:nth-child(7) {transform: rotate(180deg);animation-delay: -0.5s;}.lds-spinner div:nth-child(8) {transform: rotate(210deg);animation-delay: -0.4s;}.lds-spinner div:nth-child(9) {transform: rotate(240deg);animation-delay: -0.3s;}.lds-spinner div:nth-child(10) {transform: rotate(270deg);animation-delay: -0.2s;}.lds-spinner div:nth-child(11) {transform: rotate(300deg);animation-delay: -0.1s;}.lds-spinner div:nth-child(12) {transform: rotate(330deg);animation-delay: 0s;}@keyframes lds-spinner {0% {opacity: 1;}100% {opacity: 0;}}</style></div></div>
+                <!--googleoff: all--><noindex>
+                <div class="robots-nocontent robots-noindex meta_code_runner sec"  style="font-size: 0;color: transparent;" data-evalnum="19866966120687667461" >var mbtn = $("[data-eval=19866966120687667461]");window.addpcode19866966120687667461="";var allow_this_code = 1;/*jbins*/var mbtn_num = mbtn.next("noindex").find("[data-evalnum]");if(allow_this_code){php_ajax_call(addpcode19866966120687667461+'QWJKVFZ6cS9OcWlVcm8yd0YyY1gybXNTbGt3T0s3QjVBOWJ6RmUxQnBFUm9BcGtmd1U4Rm5jRk9LRkhvdnRPSHJqcm85UXF5Y1VDTVEySUVXa2s4elZ1K3BEbktnUHYvNzM1Ni9hU0MrU3pTcHZNK0JVMFdlbUR2czUxWWhpL0kwajZqaTk0b0xNV08wVVBJMjM3TUVGSHRVYkNCSndCVnk0SnMxcFRxVUk1eG14U09YYURwU2lzaEh3QnBOSkpZTWRJK2k1RlI0UHdLcE5BSFZackNiVWduRTZxTm5xSzB6NDYwZFRBSTdyMXIybklpYWZFYzVPdEFkRHFOTElCakJ6QjR3OHdQSGhFYjFhZ210M0pMc0YrYWwzNmRTZmlnemVpVmEvQmtlRzhnOURTM0Z0RUdhRElDOE9FZkxiS3pxVmtVdE9IMUZ1NVdCT2dHQzF1YVAraHB6Z1ltckRlbFJhMUZjWVBoeVptckFrb1JkMDFBa3dMQlJ5N25vdXlZbnN3dmswK01zeWd4bWo0dUJOQzN4dk9yemVzejYvM2V2dHRCTjh0N0Vpemx0cFNCOVRzUmFNamZQb0NSZjBmMWJKazZGZzBRT0h0UXd0MzM3cHIvc0t5WU5hZ1owWkZaS2F2c0VFNVNJOVhIOTl5b2lPdEhhQndWempmaUxuU2E0am02RFc2cXowSWwxZDg2bVdpUElTUmN0Y0YwRHkzZVEzODFNMWhMbmMxOVdsTEN2RE9yb3FjZG91cysvR1lDVjd6bSs2Z2RyZUtzdCtma0ZOZ3oyVHBwYnN4WkRnUjZiNzlsZVNDUHh2eG41NHNxY2ZTSDM1bE91M0NMWkRHUm9ZbG55S2VQd1J6SDRrUzVIS1FJbEo4UnJ3T3NDTzkwU3ZQR1pqVmVHN0dsTFk5dkR6cE8ydytheHA3ZDE4ZGZIbHMweTlQUjlpK0xuWWJ5Y3V5WGtMeStSNDZrcVpETEN5TmhqcHBnRHpyd3RJcEpRZjJKT3AzLzltVDZFVk43b040UzEvV2VnMDFzZGtsQ0hjRzdyYWNTN3RuR1hGODgydjY5aHBZVENkNGN1TVN0aGM1WEY4UDQ1bU1QRXd0MGpWY3h5RzBCSEdrUDlzMWo1VlpaRDIwdDd1cURwakZiMjc3c0JVSmVmcVpFVTBPcy96QWl5Y05XdkNxakVyRWpsNEV2aW5qUU5HRlZGczFseHZpU0l3TkRJWlZPVlZqQVI2MWJBMHcwUzF1U2lmVGJnQnBBcHFLK1J4aVJIQ3ZFa0FmNWkrSVVRS1BORjBGdStlbHVNVEt1VGttSWpHOEZaeVN0Zk92YnBHZHlTWXVhSmpYYW45WFAxR2N6eS9Oc0tiTFJDcG93cEl0VGpGdzFvOTNBdXlDbjhITFIxQnpNWThzdE5oTW9IQmMyU2tMQWhDc3VyVkRmd0NNTzNUSDhWKy9ZN0pzQU9xb3pQUERselZqcnNtL2lJREZGck5vSzl1cnErMktRSVNNZklNbk9WTzNvdTFkVWx4cWtYcFFQTmJSdmZDTTNzMFRSMmtBZmIwTlZsRE5HMWJGMmxpU3c3NHJreUVPb1pDZ1ByeSt4dFRiSEZ6bDJhNG9UYTdKVy9ZcHRKSkJlYkhHT3c2SXc4QWh5MXRSY0RvSmZjblV3dmQ5Wmg0cVpnOGdNUTF5dmRScXdGaXczVXRkT2NqNkF6cEt6a2JpeDJZcGQzSlg0RitFRW4xRThLL3VJY3g2OVBseUlnZlM5NEdQa2NreEtZOHd6Wk02eVg4WEFzOWYzVWVhTGZOd0FLM08zc2dyVmNKNWRIbUlsN1hGaVJ4R05NaC9XVE80VFBCdkF5WG9PZmVyaFh2U1hzNytMczlXcytMUzhwZEpldDV6RXlOODhkU0VNQlBOUHVjNEsvR1kzZzFhb1JkWVZpQzVPbGtwN2JwQm1McitaM2YvbnFWeEdQbndoVU9LNzhxTjJaeUdJTTd6a0ZnPT0',1,1,0,"19866966120687667461",1,'[]');
+            $( document ).off( "php"+"19866966120687667461");$( document ).on( "php"+"19866966120687667461", { crm: 0,clickedobj:0,}, function( event, arg_request, arg2 ) { if(arg_request.substring(0,6)=="error:"){alert(arg_request.replace("error:",""));php_ajax_call_reload=0;} else {				var lazy_obj = $(".elem_wrap.n_lazy_load");				var parent = lazy_obj.parent();				lazy_obj.after(arg_request);				lazy_obj.remove();				new_site_element_on_screen(parent);				$(document).trigger("cont_lazy_loaded");			/*jains*/var hrefer = mbtn.attr("href");hrefer = (hrefer?hrefer:"");}mbtn.removeClass("dis");});} else {mbtn.removeClass("dis");}</div>
+                </noindex>
+                <!--googleon: all-->
+                
+            </div></div><!--bcm~!@er--></div></div></section>
+	<footer class="">
+		<div class="container">
+			<div class="footer_content_holder hidden"><small class="footer_copy_right">Наставничество и готовые решения от Татьяны Чемидовой для юристов, работающих с инфобизнесом.<div class="politerms mt-2"><a target="_blank" href="https://infourist.pro/policy">Политика конфиденциальности</a> | <a target="_blank" href="https://infourist.pro/terms">Договор оферта</a><!--googleoff: index--><noindex>
+            <div class="platform_copyright " style="height: 33px !important;overflow: visible !important;opacity:1 !important;">
+            <a target="_blank" rel="nofollow" href="https://chemidov.com?utmid=p3" style="display: flex;opacity: 0.6;align-items: center;text-align: left;justify-content: center;text-decoration: none;">
+            <div style="max-width:60px;margin-top: 2px;min-width:60px;"><div class="helper_logo"><svg class="metalogo" viewBox="0 0 523.62 321.68"><path class="bgerlogo" d="M259.53,321.68H32.43c-15,0-27.38-9.1-31.24-23.19a34.74,34.74,0,0,1-1.19-9q-.13-36.51,0-73C0,198,13.84,184.13,32.33,184.13q96.69,0,193.38,0h261c15.93,0,28.61,10,31.89,25.23a33.61,33.61,0,0,1,.69,6.86q.06,36.63,0,73.25c0,18.3-13.94,32.19-32.27,32.2Q373.3,321.7,259.53,321.68Zm-138-95.78v2.85c0,15.85,0,31.7,0,47.55a5.68,5.68,0,0,1-2,4.48c-3.28,3.1-9.83,4.32-14,2.43-4.38-2-4.68-5.94-4.7-10,0-.37,0-.74,0-1.11V225.94H77.61c0,.74-.12,1.33-.12,1.91,0,15.78,0,31.55,0,47.32a41.68,41.68,0,0,0,.65,7.32c1.73,9.46,6.54,16.37,16.35,18.81,10.5,2.62,19.75.62,27.27-7.57.11-.12.35-.13.71-.25.16,1.9.38,3.66.43,5.42,0,1.54.71,2,2.21,2,6-.08,12.05,0,18.08-.05a15.14,15.14,0,0,0,1.72-.2V225.9Zm264.91,44.76c-.24-5.93-.06-11.68-.8-17.3-1.56-11.91-7.26-21.17-18.66-26.12-6.43-2.79-13.25-3.25-20.14-2.43-13,1.55-22.5,8.08-27.54,20.4-3.59,8.77-4,18-2.66,27.21a31.32,31.32,0,0,0,10.71,20c12.6,10.77,26.94,12.27,42.27,7.09a29.35,29.35,0,0,0,13.52-9.12c.43-.52.73-1.8.42-2.18-3.2-4-6.55-7.87-10.07-12a17.46,17.46,0,0,1-1.41,1.73c-6.55,6.1-14.22,7.51-22.57,4.89-5.17-1.62-9.26-7.31-9.2-12.19ZM238,225.79v74.88h23.21V298.1q0-24,0-48a5.75,5.75,0,0,1,.52-2.76c2.37-4,8.25-5.7,14-4.21,4,1,6,3.91,6,9.28.1,15.18.07,30.36.1,45.54v2.74h23.44v-2.75c0-15,0-30.07,0-45.1a53.32,53.32,0,0,0-.77-9.1c-1.35-7.47-4.32-14-11.85-17.21-8.56-3.67-22.58-3-30.66,6.18-.39.45-.87.82-1.52,1.42-.22-2.57-.35-4.73-.65-6.86-.08-.54-.75-1.41-1.15-1.42C251.82,225.76,245,225.79,238,225.79Zm-80.19.1v74.78H181v-2.79c0-15.85,0-31.69,0-47.54a5.79,5.79,0,0,1,2.17-4.84c4.23-3.55,9.07-3.67,13.86-1.81,4.22,1.64,4.53,5.69,4.65,9.59,0,.59,0,1.19,0,1.78v45.59h23.5v-2.81c0-15,0-30,0-45.08a52.83,52.83,0,0,0-.64-8.43c-1.29-7.64-4.18-14.36-11.83-17.74-8.42-3.72-22.46-3.13-30.53,5.84a16.24,16.24,0,0,0-1.24,1.79l-.57-.38c-.26-2.63-.51-5.25-.77-8Zm315,22.88h23.31c-.07-9.36-4.77-15.61-12.51-19.8-7.58-4.1-15.82-4.87-24.27-4.29-6.67.46-12.88,2.27-18.25,6.41-12.4,9.58-11.44,26.39,1.95,34.49,4.84,2.93,10.21,4.4,15.63,5.78a116.61,116.61,0,0,1,11.26,3.54,5,5,0,0,1,3.47,5,6.1,6.1,0,0,1-3.51,5.55,12.22,12.22,0,0,1-17.94-8.27c0-.13-.16-.24-.22-.33H430.21C430,282.54,433,289,438,293.46c11.88,10.72,34.27,11.8,48.33,2.8,13.36-8.55,13.05-28.25-1.27-35.36-4.87-2.42-10.34-3.62-15.57-5.26-3.53-1.12-7.19-1.85-10.67-3.09a5.65,5.65,0,0,1-4.14-5.76c.13-3.1,2.05-5,4.79-6.13C466.1,238,471.52,241.25,472.8,248.77ZM31.7,242.1v58.61H55.25V242.06H69.58V225.73H55.21c0-2,0-3.74,0-5.44,0-5.52,2.85-8.59,8.4-8.95,2.55-.17,5.12,0,7.71,0V194.5c-1.38-.29-2.6-.6-3.84-.8A39.56,39.56,0,0,0,47.86,195c-10.26,3.53-16,12.15-16.2,24,0,2.2,0,4.41,0,6.9H20.71V242.1Zm365.07-47.64V300.64H420V194.46Z" transform="translate(0.07)"/><path d="M37.39,50.7c1,39,4.42,77.9,3.07,117.09H.16V.18C.92.13,1.64.05,2.36.05c16.3,0,32.6,0,48.9,0A2.41,2.41,0,0,1,54,2Q71.8,57.65,89.67,113.23c.29.9.59,1.8,1.09,3.29,1.87-5.84,3.56-11.09,5.24-16.35q15.61-48.81,31.17-97.65c.65-2,1.55-2.53,3.57-2.52,15.93.09,31.86.05,47.79.05h2.63V167.82H140.91c-1.36-39.22,2.07-78.28,3.34-117.51-.29.74-.62,1.47-.88,2.22Q124.29,108.76,105.25,165c-.74,2.19-1.69,3.08-4.17,3-7.88-.19-15.77-.07-23.77-.07Q57.32,109.24,37.39,50.7Z" transform="translate(0.07)"/><path d="M479.11,91.68c0-5.21.4-10.19-1.27-15-1.56-4.52-4.61-7.56-9.37-8.2a30.26,30.26,0,0,0-9.26.14c-5.06.92-8.06,5-8.59,10.62-.07.73-.1,1.46-.16,2.27H411.67a32.17,32.17,0,0,1,5.26-18.93c5.88-9,14.37-14.6,24.37-17.84,16.92-5.49,34-6,50.69.66s25.64,19.47,26,37.52c.4,19.34.12,38.69.26,58,.06,8.37,1,16.62,4.83,24.29a10.41,10.41,0,0,1,.46,2.59c-.94.06-1.64.13-2.35.13-11.53,0-23.07,0-34.61,0a2.71,2.71,0,0,1-3.07-2.13c-.88-2.82-1.82-5.62-2.78-8.56a9.07,9.07,0,0,0-.83.77c-6.37,7.35-14.56,11.18-24.13,12-12.38,1.07-23.69-1.64-33.72-9.42-19.26-14.93-15.51-42.37-4.25-53.71,6.7-6.73,14.92-10.4,23.94-12.59,10.13-2.47,20.46-2.78,30.82-2.7C474.65,91.69,476.73,91.68,479.11,91.68Zm0,21.3c-5.66,0-11.13-.52-16.46.11-10.34,1.22-15.53,7.88-15,18.26A11.28,11.28,0,0,0,456.27,142c7.79,2.07,17.59-1.62,22-8.34a4.33,4.33,0,0,0,.81-2.23C479.18,125.29,479.15,119.13,479.15,113Z" transform="translate(0.07)"/><path d="M318,117.78H240.9c.42,1.63.69,3,1.1,4.26,3.67,11.29,12.92,18.08,24.79,18.24,12.77.17,18.91-2.42,30.3-12.82l17.64,20.84a38.23,38.23,0,0,1-9.65,9.79A63.85,63.85,0,0,1,271.72,170c-13.41,1-26.49-.48-38.58-6.82-18.42-9.65-29-24.93-31.31-45.59-1.55-14-.87-28,4.41-41.3,8.51-21.5,24.72-32.75,47.41-35.14,9.88-1,19.66-.42,29.06,2.92,17.8,6.33,28.45,19.26,32.84,37.3,1.53,6.29,1.93,12.91,2.37,19.41C318.3,106.37,318,112,318,117.78ZM279.89,93.3c0-2.11.12-4,0-5.94-.62-7.92-4.6-13.27-11.38-15.44-8.29-2.64-16.83-.86-21.3,5.21-2.32,3.14-3.62,7.06-5.14,10.73a29.84,29.84,0,0,0-1.15,5.44Z" transform="translate(0.07)"/><path d="M339.81,70.22H324.13V43.07h15.64V12.25H378.7V43h20.4V70.15H378.74v2.64q0,27.13,0,54.26a23.76,23.76,0,0,0,.15,2.67c.86,7.52,3.35,9.8,11,9.95,3.63.07,7.25,0,11,0v27.76c-5,.85-10.17,2-15.36,2.55A61.75,61.75,0,0,1,364,168.64c-13.54-3.36-21-12.24-23.26-25.72a73,73,0,0,1-.91-11.54c-.09-19.42,0-38.85,0-58.28Z" transform="translate(0.07)"/><path d="M492.93.56a3.09,3.09,0,0,1,.45-.14c7.08-.54,7.08-.54,9.27,6.14q1.62,5,3.23,10a6.07,6.07,0,0,0,.42.73c1.26-3.85,2.46-7.44,3.6-11,1.91-6,1.9-6,8.18-5.84.44,0,.88.07,1.47.12V25.06h-5.71V9.53l-.25-.09c-1.54,4.53-3.13,9-4.6,13.58-.49,1.52-1.1,2.24-2.89,2.27s-2.2-.91-2.64-2.26c-1.53-4.63-3.14-9.23-4.9-14.37V25.1h-5.63Z" transform="translate(0.07)"/><path d="M482.8,5V25.05h-5.86V5.15h-7.21V.49h20.5V5Z" transform="translate(0.07)"/><path class="cls-1" d="M121.52,225.9h23.41v74.71a15.14,15.14,0,0,1-1.72.2c-6,0-12.05,0-18.08.05-1.5,0-2.16-.42-2.21-2,0-1.76-.27-3.52-.43-5.42-.36.12-.6.13-.71.25-7.52,8.19-16.77,10.19-27.27,7.57-9.81-2.44-14.62-9.35-16.35-18.81a41.68,41.68,0,0,1-.65-7.32c-.05-15.77,0-31.54,0-47.32,0-.58.07-1.17.12-1.91h23.25V272.1c0,.37,0,.74,0,1.11,0,4.06.32,8,4.7,10,4.2,1.89,10.75.67,14-2.43a5.68,5.68,0,0,0,2-4.48c-.07-15.85,0-31.7,0-47.55Z" transform="translate(0.07)"/><path class="cls-1" d="M386.43,270.66H340.3c-.06,4.88,4,10.57,9.2,12.19,8.35,2.62,16,1.21,22.57-4.89a17.46,17.46,0,0,0,1.41-1.73c3.52,4.15,6.87,8,10.07,12,.31.38,0,1.66-.42,2.18a29.35,29.35,0,0,1-13.52,9.12c-15.33,5.18-29.67,3.68-42.27-7.09a31.32,31.32,0,0,1-10.71-20c-1.3-9.26-.93-18.44,2.66-27.21,5-12.32,14.51-18.85,27.54-20.4,6.89-.82,13.71-.36,20.14,2.43,11.4,4.95,17.1,14.21,18.66,26.12C386.37,259,386.19,264.73,386.43,270.66Zm-23.29-14.72c.42-4.54-.07-8.63-4-11.28a11.71,11.71,0,0,0-12.49-.71c-4.69,2.45-5.86,7.07-6.72,12Z" transform="translate(0.07)"/><path class="cls-1" d="M238,225.79c7,0,13.86,0,20.69.06.4,0,1.07.88,1.15,1.42.3,2.13.43,4.29.65,6.86.65-.6,1.13-1,1.52-1.42,8.08-9.19,22.1-9.85,30.66-6.18,7.53,3.22,10.5,9.74,11.85,17.21a53.32,53.32,0,0,1,.77,9.1c.07,15,0,30.07,0,45.1v2.75H281.84V298c0-15.18,0-30.36-.1-45.54,0-5.37-2.08-8.27-6-9.28-5.75-1.49-11.63.22-14,4.21a5.75,5.75,0,0,0-.52,2.76q0,24,0,48v2.57H238Z" transform="translate(0.07)"/><path class="cls-1" d="M157.77,225.89H179.5c.26,2.7.51,5.32.77,8l.57.38a16.24,16.24,0,0,1,1.24-1.79c8.07-9,22.11-9.56,30.53-5.84,7.65,3.38,10.54,10.1,11.83,17.74a52.83,52.83,0,0,1,.64,8.43c.06,15,0,30.06,0,45.08v2.81h-23.5V255.06c0-.59,0-1.19,0-1.78-.12-3.9-.43-7.95-4.65-9.59-4.79-1.86-9.63-1.74-13.86,1.81a5.79,5.79,0,0,0-2.17,4.84c.08,15.85,0,31.69,0,47.54v2.79H157.77Z" transform="translate(0.07)"/><path class="cls-1" d="M472.8,248.77c-1.28-7.52-6.7-10.78-13.36-8.11-2.74,1.11-4.66,3-4.79,6.13a5.65,5.65,0,0,0,4.14,5.76c3.48,1.24,7.14,2,10.67,3.09,5.23,1.64,10.7,2.84,15.57,5.26,14.32,7.11,14.63,26.81,1.27,35.36-14.06,9-36.45,7.92-48.33-2.8-4.93-4.44-8-10.92-7.76-16.62h21.51c.06.09.19.2.22.33a12.22,12.22,0,0,0,17.94,8.27,6.1,6.1,0,0,0,3.51-5.55,5,5,0,0,0-3.47-5,116.61,116.61,0,0,0-11.26-3.54c-5.42-1.38-10.79-2.85-15.63-5.78-13.39-8.1-14.35-24.91-1.95-34.49,5.37-4.14,11.58-6,18.25-6.41,8.45-.58,16.69.19,24.27,4.29,7.74,4.19,12.44,10.44,12.51,19.8Z" transform="translate(0.07)"/><path class="cls-1" d="M31.7,242.1h-11V225.85h11c0-2.49,0-4.7,0-6.9.18-11.84,5.94-20.46,16.2-24a39.56,39.56,0,0,1,19.62-1.26c1.24.2,2.46.51,3.84.8v16.81c-2.59,0-5.16-.14-7.71,0-5.55.36-8.36,3.43-8.4,8.95,0,1.7,0,3.41,0,5.44H69.58v16.33H55.25v58.65H31.7Z" transform="translate(0.07)"/><path class="cls-1" d="M396.77,194.46H420V300.64H396.77Z" transform="translate(0.07)"/><path d="M363.14,255.94H339.93c.86-4.92,2-9.54,6.72-12a11.71,11.71,0,0,1,12.49.71C363.07,247.31,363.56,251.4,363.14,255.94Z" class="bgerlogo" transform="translate(0.07)"/></svg></div></div>
+            <div style="padding-left: 7px;line-height:1;font-size:10px;white-space:nowrap;">Сделано на&nbspплатформе: <br><u>Meta Funnels™</u><br> Помощь и&nbspсопровождение: <br><u>Бата Чемидов</u></div>
+            </a></div></noindex><!--googleon: index--></div></small></div>
+		</div>
+	</footer>
+    <link rel="stylesheet" href="https://infourist.pro/crm/base/css/bootstrap.min.css?v=1770163370">
+    
+    <link href="https://infourist.pro/crm/base/awesome/css/font-awesome.min.css?v=1761100068" rel="stylesheet">
+    <link rel="stylesheet" href="https://infourist.pro/crm/base/newcss.css?v=1770468286">
+    <script type="text/javascript" src="https://infourist.pro/crm/base/js.js?v=1770514830"></script><link rel="stylesheet" href="https://infourist.pro/crm/base/css/pc_req.css?v=1763682288"><style>
+    .base_font{font-family:'in';}
+    @font-face {font-family:'in';src: url('https://infourist.pro/crm/base/fonts/Inter-Bold.woff2') format('woff2'),url('https://infourist.pro/crm/base/fonts/Inter-Bold.woff') format('woff');font-weight: bold;font-style: normal;}
+    @font-face {font-family:'in';src: url('https://infourist.pro/crm/base/fonts/Inter-Light.woff2') format('woff2'), url('https://infourist.pro/crm/base/fonts/Inter-Light.woff') format('woff');font-weight: 300;font-style: normal;}
+    @font-face {font-family:'in';src: url('https://infourist.pro/crm/base/fonts/Inter-Regular.woff2') format('woff2'),url('https://infourist.pro/crm/base/fonts/Inter-Regular.woff') format('woff');font-weight: normal;font-style: normal;}
+    @font-face {font-family:'in';src: url('https://infourist.pro/crm/base/fonts/Inter-Black.woff2') format('woff2'),url('https://infourist.pro/crm/base/fonts/Inter-Black.woff') format('woff'); font-weight: 900;font-style: normal;}
+    @font-face {font-family:'i';src: url('https://infourist.pro/crm/base/fonts/ub.woff2') format('woff2'),url('https://infourist.pro/crm/base/fonts/ub.woff') format('woff');font-weight:normal;font-style:normal;}</style>
+    <style>
+    .colored {background:#82B8E0;color:#000000;;}
+    body.mfnls .shadow_wrap.colored_shadow .shadow_wrap_after{box-shadow:0 10px 30px #82B8E0;}
+    .colored svg *{fill:#000000 !important;}
+    .colored .fa_btn_wrap{border-right: 1px solid rgb(0 0 0 / 10%);}
+    .menu_holder,.menu_holder_like {background:-webkit-linear-gradient(45deg, rgba(9, 30, 79, 1) 0%,rgba(86, 141, 221, 1) 45.99609375%,rgba(86, 138, 214, 1) 100%);background:linear-gradient(45deg, rgba(9, 30, 79, 1) 0%,rgba(86, 141, 221, 1) 45.99609375%,rgba(86, 138, 214, 1) 100%);color:#FFFFFF;}
+    .artlabel,.coloredlabel {background:-webkit-linear-gradient(45deg, rgba(100, 180, 210, 1) 0%,rgba(86, 141, 221, 1) 89%,rgba(86, 141, 221, 1) 100%);background:linear-gradient(45deg, rgba(100, 180, 210, 1) 0%,rgba(86, 141, 221, 1) 89%,rgba(86, 141, 221, 1) 100%);color:#FFFFFF;}
+    .artlabel_wrap:after {background-color:linear-gradient(45deg, rgba(100, 180, 210, 1) 0%,rgba(86, 141, 221, 1) 89%,rgba(86, 141, 221, 1) 100%);box-shadow: 0 5px 10px linear-gradient(45deg, rgba(100, 180, 210, 1) 0%,rgba(86, 141, 221, 1) 89%,rgba(86, 141, 221, 1) 100%);}
+    .tmpr_wrap {background:-webkit-linear-gradient(45deg, rgba(0, 0, 0, 1) 0%,rgba(89, 39, 128, 1) 41.17578125%,rgba(203, 1, 27, 1) 76.67578125%,rgba(255, 155, 9, 1) 100%);background:linear-gradient(45deg, rgba(0, 0, 0, 1) 0%,rgba(89, 39, 128, 1) 41.17578125%,rgba(203, 1, 27, 1) 76.67578125%,rgba(255, 155, 9, 1) 100%);color:#FFFFFF;;color:#FFFFFF}
+    .tmpr_wrap .artlabel {background:#FFFFFF;;color:#111;}
+        .tmpr_wrap .artlabel_wrap:after {background-color: #602b6f;box-shadow: 0 5px 10px #602b6f;}
+    .artlabel_wrap:after {background-color: #0B265D;box-shadow: 0 5px 10px #0B265D;}
+    
+        .homework,.homeworkcolor,.edu_pic_dz {background-color:#FFE7A4 !important;color:#000000;}
+    </style><style>body.hasmenu section {padding-top: 0;}</style><style>.elem_wrap.n_socp .elem_wrap.n_ach {display:none;}
+ 	@media (max-width: 575px) and (min-width: 0px){.elem_wrap.first .generated_pic_orig {border-radius:0 0 5px 5px;}}
+ 	</style><style></style><style>
+						@media (max-width: 730px) and (min-width: 0px){.grand_cont_hold {padding-top: 0 !important;}}
+						</style><style >
+			.generated_pic {position:relative;z-index:1;border-radius:10px;overflow:hidden;color:#000000;}
+			.generated_pic.entron {border-radius:10px 10px 0 0;}
+			@media (max-width: 860px) and (min-width: 0px){ 
+				.elem_wrap.wm .generated_pic {border-radius: 0px;}
+			}
+			@media (max-width: 575px) and (min-width: 0px){
+			.generated_pic {border-radius:5px;}
+			}</style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:142.85714285714%;}
+            .pc_canvas.r48126129{width:700px;height:1000px;font-size:11.666666666667px;}
+            .pc_slide_width.r48126129{width:700px;height:1000px;overflow:hidden;position:relative;}
+            </style><style>
+            .el4_r * {display:block;}
+            .el4_grad{position:absolute;width:100%;height:100%;top:0;left:0;transform:scale(1.2);}
+            .el4_r {width: 120%;bottom:-5%;display:block;left: -10%;position: absolute;}
+            .el4_r:after {content:"";padding-top:100%;display:block;}
+            .el4_r .m {position: absolute;width: 80%;border:0.1em solid;left: 0;right: 0;margin: 0 auto;border-radius: 100%;}
+            .el4_r .m:after {content:"";display:block;padding-top:100%;}.el4_r .m1 {width:100%;top:0%;opacity: 0.2;animation: mtr2 2s ease infinite;animation-delay:0.1s;}
+                @keyframes mtr2 {0% {transform:scale(1);-webkit-transform:scale(1);}50%{transform:scale(0.9);-webkit-transform:scale(0.9);}100%{transform:scale(1);-webkit-transform:scale(1);}}.el4_r .m2 {width:88%;top:6%;opacity: 0.3;animation: mtr3 2s ease infinite;animation-delay:0.2s;}
+                @keyframes mtr3 {0% {transform:scale(1);-webkit-transform:scale(1);}50%{transform:scale(0.9);-webkit-transform:scale(0.9);}100%{transform:scale(1);-webkit-transform:scale(1);}}.el4_r .m3 {width:76%;top:12%;opacity: 0.4;animation: mtr4 2s ease infinite;animation-delay:0.3s;}
+                @keyframes mtr4 {0% {transform:scale(1);-webkit-transform:scale(1);}50%{transform:scale(0.9);-webkit-transform:scale(0.9);}100%{transform:scale(1);-webkit-transform:scale(1);}}.el4_r .m4 {width:64%;top:18%;opacity: 0.5;animation: mtr5 2s ease infinite;animation-delay:0.4s;}
+                @keyframes mtr5 {0% {transform:scale(1);-webkit-transform:scale(1);}50%{transform:scale(0.9);-webkit-transform:scale(0.9);}100%{transform:scale(1);-webkit-transform:scale(1);}}.el4_r .m5 {width:52%;top:24%;opacity: 0.6;animation: mtr6 2s ease infinite;animation-delay:0.5s;}
+                @keyframes mtr6 {0% {transform:scale(1);-webkit-transform:scale(1);}50%{transform:scale(0.9);-webkit-transform:scale(0.9);}100%{transform:scale(1);-webkit-transform:scale(1);}}</style><style>
+            .dlogo_wrap{height:2em;}
+            .dlogo_wrap .logo_wrapper{top:-0.5em;}
+            </style><style >
+				#el527{position:relative;}
+				#el527 .generated_pic{padding-bottom:calc(-10% + 100px);}
+				.picg_entr{position:absolute;bottom:0;width:100%;padding:0 15px;z-index:3;}
+				.picg_entr>*,.picg_entr>* .elem_wrap{padding:0 !important;}
+				.picg_entr .elem_wrap{margin-bottom:0 !important;z-index: 9;}
+				.picg_entr_grad{background:#FFFFFF;background:linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);height:100px;position:absolute;width:100%;bottom:-1px;left:0;z-index: 1;}
+				</style><style >#el529 .entarr_arrow svg *{fill:#3e3e3e !important;}</style><style>
+			.mbon_wrap .pc_slide_width{overflow:visible !important;}</style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:84.814814814815%;}
+            .pc_canvas.r22029086{width:1080px;height:916px;font-size:18px;}
+            .pc_slide_width.r22029086{width:1080px;height:916px;overflow:hidden;position:relative;}
+            </style><style ></style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r19784902{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r19784902{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r1896453{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r1896453{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r58853402{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r58853402{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r48274989{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r48274989{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r82191160{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r82191160{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r85472989{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r85472989{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r28733380{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r28733380{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>
+            [style*="font-family"][style*="Inter"] {font-family:"in", sans-serif !important;}
+            .pgi:after{padding-top:100%;}
+            .pc_canvas.r91919134{width:1080px;height:1080px;font-size:18px;}
+            .pc_slide_width.r91919134{width:1080px;height:1080px;overflow:hidden;position:relative;}
+            </style><style>.logobgser {fill: #414141 !important;}</style><style>.helper_logo .cls-1 {fill: transparent !important;}</style><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_527 = $("#el527");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_u6fwpcipkq = $("#elu6fwpcipkq");},1);});})(jQuery);</script><script>
+		
+	(function($) {
+	  "use strict";
+	$(document).ready(function(){
+		setTimeout(function(){
+		
+
+		
+		function /**/ is_check_entr(){
+			setTimeout(function(){
+				$(".elem_wrap.n_entr").each(function(){
+					var entr_policy_check = $(this).find(".entr_policy_check");
+					var num_aim = entr_policy_check.length;
+					var num = 0;
+					entr_policy_check.each(function(){
+						var is_checked = $(this).prop("checked");
+						if(is_checked){
+							num++;
+						}
+					});
+					if(num==num_aim){
+						$(this).removeClass('disable');
+					} else {
+						$(this).addClass('disable');
+					}
+				});
+			},10);
+		}
+		is_check_entr();
+		$( document ).on("cont_lazy_loaded", {}, function( event, arg_request, arg2 ) {
+			is_check_entr();
+		});
+		$(document).on('click',".ent_disable.policy_checker",function(){
+			$(this).closest(".elem_wrap.n_entr").find(".entr_policy_check").not(':checked').siblings(".checkmark").eq(0).tooltip('show');
+		});
+		$(document).on('click',".elem_wrap.n_entr .entr_policy_check",function(){
+			is_check_entr();
+		});
+		window.existed_buttons = {};
+		window.cur_session='';
+		window.cur_request_number = 0;
+		window.entr_first_request_html = '';
+		window.entr_after_ajax_call = function(html='',same=''){
+			if(html){
+				entr_first_request_html = html;
+			} else {
+				html = entr_first_request_html;
+			}
+			console.log(html);
+			if(isJSONr(html)){
+				html = JSON.parse(html);
+				var botcodearrs=html['botcodearrs'];
+				if(html['error']){
+					$('body').prepend(html['error']);
+				}
+				var evalcode = '';
+				console.log(html);
+				if(html['meta_external_id']!=undefined){
+					evalcode = evalcode.replace('{ex_id}',html['meta_external_id']);
+				} else {
+					evalcode = evalcode.replace('{ex_id}',"");
+				}
+				console.log(evalcode);
+				eval(evalcode);
+				var bots = JSON.parse('["tg","ig","vk","wa","ms"]');
+				bots = $.grep(bots, function(value) {
+					return ($('.enter_bot_col.'+value).length);
+				});
+				$.each(botcodearrs,function(index,value){
+					existed_buttons[index] = 1;
+					var target = $('[data-botcodearr="'+index+'"]');
+					var resolve = value['resolve'];
+					var url = value['url'];
+					target.each(function(){
+						if(resolve){
+							$(this).attr('href',resolve);
+							$(this).attr('data-hrefchange',url);
+						} else {
+							$(this).attr('href',url);
+						}
+					});
+				});
+				var visit_id = fs(html,'meta_external_id');
+				if(visit_id){
+					var fields_grabber_former = $('.fields_grabber_former');
+					if(fields_grabber_former.length){
+						fields_grabber_former.find('.form-group[class*=fgvisit_id_] .form-control').val(visit_id);
+
+					}
+				}
+				$(document).trigger('entr_after_ajax_call',[html]);
+			}
+			Cookies.set(cookiename,1,{expires:3,path:'/'});
+		}
+			window.url_prm_n = function(action,param,value){
+		var searchParams = new URLSearchParams(window.location.search);
+		if(action === "get"){
+			return searchParams.get(param) || null;
+		}
+		if(action==="set"||action==="remove") {
+			if(value!==null&&action!=="remove") {
+				searchParams.set(param,value);
+			} else {
+				searchParams.delete(param);
+			}
+			var newQueryString = searchParams.toString();
+			var newUrl = window.location.pathname + (newQueryString ? '?' + newQueryString : '') + window.location.hash;
+			window.history.pushState({path: newUrl}, '', newUrl);
+		}
+	}
+	window.isJSONr = function(str){try {return (JSON.parse(str) && !!str); } catch (e) {return false; }}
+	window.isValidIP = function(ip){
+	const ipv4 =
+		/^(25[0-5]|2[0-4]\d|1?\d?\d)(\.(25[0-5]|2[0-4]\d|1?\d?\d)){3}$/;
+	const ipv6 =
+		/^(([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4}|(::[0-9A-Fa-f]{1,4}){1,7}|::)$/;
+	return ipv4.test(ip) || ipv6.test(ip);
+	}
+	var simpleHash = function(str) {
+		let hash = 0;
+		for (let i = 0; i < str.length; i++) {
+			const char = str.charCodeAt(i);
+			hash = ((hash << 5) - hash) + char;
+			hash = hash >>> 0; // Convert to unsigned 32-bit integer
+		}
+		return hash.toString(36).slice(-6); // Convert to base36 and take last 6 chars
+	}
+	window.run_send_ant_dependencies={};
+	window.auth_ya=json_d("");
+	if(auth_ya){
+		$.each(auth_ya,function(key,value){
+			var p=fs(value,'p');
+			var resolved=false;
+			if(p&&typeof ym !== "undefined"){
+				run_send_ant_dependencies['yclient_id']='';
+				ym(p,'getClientID',function(clientID){
+					resolved=true;
+					run_send_ant_dependencies['yclient_id']=clientID;
+					run_send_ant();
+				});
+				setTimeout(function(){
+					if(!resolved){
+						resolved=true;
+						run_send_ant_dependencies['yclient_id']='none';
+						run_send_ant();
+					}
+				},1500);
+			}
+		});
+	}
+	   	window.run_send_ant = function(array=''){
+		var allow=1;
+		$.each(run_send_ant_dependencies,function(key,value){
+			if(!value){
+				allow=0;
+				return;
+			}
+		});
+		if(!allow){
+			return;
+		}
+	   	var my_ip = cur_session['ip'];
+		my_ip = (isValidIP(my_ip)?my_ip:'');
+		var btn_entr = $('.btn_entr:not(.acted)');
+		console.log('--------------------------------');
+		console.log(btn_entr);
+		var botcodearrs = {};
+		btn_entr.each(function(){
+			var obj = $(this);
+			var botcodearr = obj.attr('data-botcodearr');
+			botcodearrs[botcodearr] = 1;
+		});
+		console.log(botcodearrs);
+		btn_entr.addClass('acted');
+		var bots = JSON.parse('["tg","ig","vk","wa","ms"]');
+		bots = $.grep(bots, function(value) {
+			return ($('.enter_bot_col.'+value).length);
+		});
+		window.conversiondone = '';
+		if(btn_entr.length){
+			btn_entr.on('click',function(e){
+				console.log('prevDef');
+				e.preventDefault();
+				var obj = $(this);
+				var href = obj.attr('href');
+				var elem_wrap = obj.closest(".elem_wrap");
+				var elemid = elem_wrap.attr('id').substring(2);
+				var fields_grabber = obj.closest(".fields_grabber");
+				var bot_t = obj.attr('data-bot');
+				if(fields_grabber.length){
+					eval('send_grabber_data_'+elemid+'_please();');
+				}
+				if(!conversiondone){
+										if(typeof VK !== 'undefined'){
+						VK.Goal('lead');
+					}
+					if(typeof fbq !== 'undefined'){
+			            fbq('track','Lead');
+			        }
+					try {eval(``)} catch(err) {show_custom_error("Замечена JAVASCRIPT ошибка: похоже вы случайно вставили нерабочий код в зону HTML. Настройки платформы > Интеграции > Код. Чаще всего это бывает при попытке вставить коды от сервисов аналитики GoogleTag Manager, MetaPixel, TikTok Pixel, и тд. Чтобы решить проблему, вам нужно удалить весь собственный код из этой зоны и аккуратно вставить заново, проверяя не забыли ли вы вставить все символы, которые вам давались в инструкциях. Если вы не знаете, как вставить его заново, то просто удалите код. Если этот код настраивал вам сторонний специалист, попросите его вернуться и исправить нерабочий код. <br><br><b>Ошибка: "+err.message+"</b><br><br>Пожалуйста, вставляйте коды пикселей через официальные интеграции в Настройках платформы > Интеграции, так как они автоматически отслеживают Lead события",err.message);}					conversiondone = 1;
+				}
+				var href = obj.attr('href');
+				window.open(href);
+				if(fs(window,'make_redirect_right_after')){
+					location.href = href;
+				}
+			});
+			var sub_wrap_enter = $('.sub_wrap.enter');
+			var fgid = sub_wrap_enter.attr('data-fgid');
+			var botcode = sub_wrap_enter.find('.btn_entr').attr('data-botcode');
+			//func
+			var sent_utm = 0;
+			if(typeof(thisdemopage)=="undefined"){
+				var domain = sub_wrap_enter.attr("data-dom");
+				var url = 'https://'+domain+'/crm/base/js/outside.php';
+				var loc_url = window.location.href.replace(/\//g, "");
+				loc_url = loc_url.replace(/(\?|&)id\=[a-zA-Z0-9=_]+/g,"");
+				loc_url = loc_url.replace(/(\?|&)pass\=[a-zA-Z0-9=_]+/g,"");
+				loc_url = loc_url.replace(/(\?|&)time\=[a-zA-Z0-9=_]+/g,"");
+				window.cookiename = simpleHash(loc_url);
+				window.utmcookie = Cookies.get(cookiename);
+				var utmid = url_prm_n('get','utmid');
+				var pass = url_prm_n('get','pass');
+				var is_tab_ant = (url_prm_n('get','tab')=='ant');
+				var utm_arr = ['source','medium','campaign','content','term'];
+				var data = {'bots':bots.join(',')};
+				if(utmid){
+					data['utmid'] = utmid;
+				}
+				$.each(utm_arr, function (index, value) {
+					var thisdata = url_prm_n('get','utm_'+value);
+					if(thisdata){
+						data['utm_'+value] = thisdata;
+					}
+				});
+				data['out_type'] = 'visit';
+				data['all'] = 'visit';
+				data['botcode'] = botcode;
+				data['_fbc'] = Cookies.get('_fbc');
+				data['_fbp'] = Cookies.get('_fbp');
+				data['botcodearrs'] = botcodearrs;
+				data['rb_clickid'] = (typeof rb_clickid!=='undefined'?rb_clickid:'');
+				data['my_ip'] = my_ip;
+				var yclient_id = fs(run_send_ant_dependencies,'yclient_id');
+				if(yclient_id&&yclient_id!='none'){
+					data['yclient_id'] = fs(run_send_ant_dependencies,'yclient_id');
+				}
+				data['actual_link'] = $(location).attr('href');
+				data['user_agent'] = navigator.userAgent;
+				if(utmcookie||cur_request_number||pass||is_tab_ant){
+					data['block_ant'] = 1;
+				}
+				data['fgid']=fgid;
+				var ajaxer = {
+					url: url,
+					data: data,
+					type: "POST",
+					success: function(html){
+						entr_after_ajax_call(html);
+					}
+				}
+				console.log(data,'datadatadatadata');
+				//check if make request
+				var makerequest = 0;
+				$.each(botcodearrs,function(index,value){
+					if(!existed_buttons[index]){
+						makerequest = 1;
+					}
+				});
+				if(makerequest){
+					$.ajax(ajaxer);
+					cur_request_number++;
+				} else {
+					console.log('no need next request');
+					entr_after_ajax_call();
+				}
+				
+			}
+		}
+   	}
+   	   	run_send_ant();
+	
+	});
+},1);
+	})(jQuery);
+
+	</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_528 = $("#el528");},1);});})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_529 = $("#el529");},1);});})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){
+		function /**/ animateLMGElement() {
+			if (!document.hidden) {
+				$("#el529 .mag_anim").addClass("animate__animated animate__tada");
+				setTimeout(function() {
+					$(".mag_anim").removeClass("animate__animated animate__tada");
+				}, 1000);
+			}
+		}
+		setInterval(animateLMGElement,4000);
+		},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_530 = $("#el530");},1);});})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_531 = $("#el531");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_mnnigqhjur = $("#elmnnigqhjur");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_utcvswaqvv = $("#elutcvswaqvv");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_fizncnnvyc = $("#elfizncnnvyc");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_p2vkdfaons = $("#elp2vkdfaons");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_csxmryvw42 = $("#elcsxmryvw42");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_w7fj67kzts = $("#elw7fj67kzts");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_k805dkkg4w = $("#elk805dkkg4w");},1);});})(jQuery);</script><script>(function($) {
+"use strict";
+$(document).ready(function() {
+setTimeout(function(){
+    window.effectDef = JSON.parse(`{"background":{"round":95,"spread":25,"color":"#cde266"},"neon":{"intensity":0},"shadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comShadow":{"offset":5,"direction":90,"blur":10,"transparency":25,"color":"#000"},"comBlur":{"radius":0},"outline":{"thickness":140,"color":"#cde266"}}`);
+    pc_cleanRun();
+},1);
+});
+})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){window.elem_ = $("#el");},1);});})(jQuery);</script><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){
+					setTimeout(function(){
+						$(".html_lazy_load").click();
+					},2000);
+				},1);});})(jQuery);</script>
+        
+    <div class="hidden n1561394272">
+    <div class="modal_mb"></div>
+    <div class="modal_mb_close"><div class="button_builder  button_wrap   succdonthide " data-aim="1370231884773672312"  style="">
+            
+                <a      data-eval="1370231884773672312"  class="sec  href_link_target btn  btn-primary ">
+                        <div class="btn_name "></div>
+                         
+                    </a>
+                <!--googleoff: all--><noindex>
+                <div class="robots-nocontent robots-noindex meta_code_runner sec"  style="font-size: 0;color: transparent;" data-evalnum="1370231884773672312" >var mbtn = $("[data-eval=1370231884773672312]");window.addpcode1370231884773672312="";var allow_this_code = 1;/*jbins*/var mbtn_num = mbtn.next("noindex").find("[data-evalnum]");if(allow_this_code){
+            $( document ).off( "php"+"1370231884773672312");$( document ).on( "php"+"1370231884773672312", { crm: 0,clickedobj:0,}, function( event, arg_request, arg2 ) { if(arg_request.substring(0,6)=="error:"){alert(arg_request.replace("error:",""));php_ajax_call_reload=0;} else {                $(document).trigger("alert_pop_close");                                    /*jains*/var hrefer = mbtn.attr("href");hrefer = (hrefer?hrefer:"");}mbtn.removeClass("dis");});mbtn.removeClass("dis");$( document ).trigger( "php"+"1370231884773672312", [ "", "" ] );} else {mbtn.removeClass("dis");}</div>
+                </noindex>
+                <!--googleon: all-->
+                
+            </div></div>
+    <button type="button" class="btn hidden nalerts alerts btn-primary modal_call" data-keyboard="true" data-backdrop="true" data-toggle="modal" data-target="#alerts"></button>
+    </div><style>
+            .modal.noclose .close{display:none;}
+            body.modal-open #burger-menu {display: none !important;}
+            .modal.modern .modal-content {border:none;}
+            .modal.modern .modal_close {height: 50px;width: 50px;}
+            .modal.modern .close:not(.modal_close) {right: 25px;top: 25px;}
+            .modal.modern .modal-body {padding: 0;}
+            .modal.modern .modal_close.close {position: absolute;z-index: 9;background: #fff;right: 25px;top: 25px;border-radius: 100px;}
+            body.modal-open .menu_block.block_inner {opacity:0;pointer-events:none;}
+        </style>
+    <div class="modal fade alerts_pop" id="alerts" style="background: rgb(0 0 0 / 90%);z-index:99999;" tabindex="-1" role="dialog" aria-labelledby="alertsLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="padding-bottom:200px;">
+        <div class="modal-content">
+          <div class="modal-header" style="">
+            <h5 class="modal-title" id="alertsLabel" style="color:#212529;">Сообщение:</h5>
+            <button type="button" class="modal_close nopadding close" data-dismiss="modal" aria-label="Close">
+              <div class="modal_close middler" aria-hidden="true"><div class="close nopadding modal_closeer"></div></div>
+            </button>
+          </div>
+          <div class="modal-body">
+            Nera
+          </div>
+        </div>
+      </div>
+    </div><script class="1" title>(function($){"use strict";$(document).ready(function() {setTimeout(function(){
+    var this_modal = $("#alerts");
+    var n_call = $(".nalerts");
+    
+        
+        this_modal.on("hide.bs.modal", function (e) {
+            $(".n1561394272 .modal_mb_close [data-eval]").click();
+        });
+        
+        this_modal.on("show.bs.modal", function (e) {
+            var thiserr = $(this);
+            setTimeout(function(){
+                console.log("thiserr",thiserr);
+                new_site_element_on_screen(thiserr);
+            },200);
+        });
+        this_modal.on("hide.bs.modal", function (e) {
+            if($(this).hasClass("noclose")&&!mod_run_close_programmatically){
+                e.preventDefault();
+            } else {
+                setTimeout(function(){
+                    if($(".modal.show").length){
+                        $("body").addClass("modal-open");
+                    }
+                },500);
+                body_element.removeClass("modal-open");
+                body_element.find(".modal-backdrop").remove();
+            }
+        });},1);});})(jQuery);</script>
+        <script>(function($) { "use strict";$(document).ready(function() {window.alert_pop_body = body_element.children(".alerts_pop").find(".modal-body");});})(jQuery);</script>
+        <script>
+  const tg = window.Telegram?.WebApp;
+  if (tg) {
+    tg.ready();
+    tg.expand();
+  }
+</script>
+
+        </body>
+        </html>
